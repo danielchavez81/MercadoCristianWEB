@@ -60,12 +60,8 @@ ul li a:hover{
     grid-template-columns: 60% 40%;
     grid-column-gap: 0px;
 }
-.section{
-    
-}
-.outerR{
-    background-color: orange;
-    place-items: center;
+section{
+    background-color: red;
 }
 .articleW {
     margin: 30px;
