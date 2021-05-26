@@ -1,0 +1,39 @@
+.head-nav{
+    background-color: bisque;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 7fr 4fr;
+    align-items: center;
+}
+ul{
+    list-style: none;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul li a{
+    padding: 57px;
+    font-weight: bold;
+    font-size: 20px;
+}
+ul li a:hover{
+    background-color:rgb(187, 165, 138) ;
+}    
+
+.Mapa{
+   
+    width: 1859px;
+    height: 819px;
+    }
+.Texto-Ubicacion{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(124, 8, 8);
+    background-color: royalblue;
+
+}
