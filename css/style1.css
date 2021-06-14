@@ -1,6 +1,5 @@
 
 *{  
-    
     margin: 0px;
     padding: 0px;
 }
@@ -22,7 +21,7 @@ header{
     padding: 0px;
     margin: 0px;
     background-color: #363636;
-    box-shadow: 1px 50px 0px 0px #272727;
+    
 }
 .navbar{
     list-style: none;
@@ -49,38 +48,11 @@ header{
     margin-right: auto;
 }
 
-/* Imagen de fondo */
-
-#bg {
-    position: absolute;
-    width: 100%;
-    height: 842px;
-    margin: 0px;
-    
-}
-#bg2{
-    position: absolute;
-    width: 100%;
-    height: 953px;
-    margin: 0px;
-    top: 976px;
-}
 .wrapper{
     display: flex;
     background-image: url(../img/bg1.png);
     width: 100%;
     height: 842px;
-}
-.wrapper2{
-    background-image: url(../img/bg2.png);
-    width: 100%;
-    height: 953px;
-    z-index: 1;
-}
-.wrapper3{
-    background-image: url(../img/bg3.png);
-    width: 100%;
-    height: 953px;
 }
 #cont1{
     display: flex;
@@ -94,7 +66,6 @@ header{
     justify-content: center;
     border-radius: 50px;
     flex-direction: column;   
-     
 }
 
 #dec{
@@ -103,25 +74,55 @@ header{
     top: 663px;
 }
 
-
 .text{
     padding: 20px;
-    
 }
+
 h1{
     font-size: 72px;
 }
+
 h2{
     font-size: 42px;
 }
-#bg3 {
-    position: absolute;
+
+.wrapper2{
+    background-image: url(../img/bg2.png);
     width: 100%;
-    height: 953px;
-    margin: 0px;
-    top: 1929px;
+    height: 1080px;
+    z-index: 1;
 }
 #Ubicacion {
     position: absolute;
     z-index: 5  ;
 }
+
+.img{
+    position: absolute;
+    right: 0px;
+    background-image: url(../img/Vector\ 4.png);
+    width: 833px;
+    height: 1085px;
+}
+
+
+
+
+
+.wrapper3{
+    background-image: url(../img/bg3.png);
+    width: 100%;
+    height: 1080px;
+}
+
+.img3{
+    position: absolute;
+    right: 0px;
+    background-image: url(../img/Vector\ 7.png);
+    width: 561px;
+    height: 261px;
+}
+
+
+
+
