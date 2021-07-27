@@ -1,7 +1,8 @@
-
+/*General*/
 *{  
     margin: 0px;
     padding: 0px;
+    
 }
 /* Variables de color*/
 :root{
@@ -9,57 +10,55 @@
     --color2: #484848;
 }
 
+/*Barra de navegacion*/
 
-.curva{
-    background-image: url(../img/v1.svg);
-    width: 500px;
-    height: 140px;
-    position: absolute;
-    top: 140px;
-    z-index: 10;
-    border-color: azure;
-}
-
-.nav{
+/*Contenedor de los elementos*/
+.nav_container{
     width: 100%;
     height: 134px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-.bg{
+
+/*Fondo de la barra*/
+.nav_background{
     background-image: url(../img/Vector\ 1.png);
     width: 100%;
     height: 342px;
     position: absolute;
 }
-.navbar{
+
+/*Elementos*/
+.nav_bar{
     list-style: none;
-    margin-right: 30px;
-    
+    margin-right: 31px;   
 }
 
-li a {
-    text-decoration: none;
-    font-weight: bold; 
-    font-size: 18px;
-    letter-spacing: 1px;
-   
-}
-
-.navbar li {
+.nav_bar li {
     display: inline-block;
     padding: 10px 30px;
     margin: 20px;
     transition: all 0.2s ease 0s;
 }
 
-.navbar li:hover {
-    background-color: #272727;
-    border-radius: 10%;
+.nav_bar li a {
+    text-decoration: none;
+    font-weight: bold; 
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'Merienda One', cursive;
 }
 
-.navbar li a {
+.nav_bar li:hover {
+    background-color: #272727;
+    border-radius: 20px;
+    outline-style: solid ;
+    outline-width: 3px;
+    outline-color: var(--color1);
+}
+
+.nav_bar li a {
     color: var(--color1)
 }
 
@@ -71,14 +70,16 @@ li a {
 
 /*---------------------------------------*/
 
-.wrapper{
-    display: flex;
+/*Seccion 1*/
+
+.section_1{
     background-image: url(../img/bg1.png);
     width: 100%;
     height: 955px;
-    
 }
-#section{
+
+/*Banner que muestra la informacion del local*/
+.section_1--article_1{
     display: flex;
     background-color: var(--color1);
     position: absolute;
@@ -90,17 +91,17 @@ li a {
     justify-content: center;
     border-radius: 50px;
     flex-direction: column;   
-    
 }
 
-.img1{
+.section_1_image{
     position: absolute;
-    right: 1px;
+    right: -0.5px;
     top: 643px;
 }
 
-.text{
+.article_text{
     padding: 20px;
+    font-family: 'Merienda One', cursive;
 }
 
 h1{
@@ -111,35 +112,61 @@ h2{
     font-size: 42px;
 }
 
-.wrapper2{
+/*Seccion 2*/
+
+.section_2{
     background-image: url(../img/bg2.png);
+    width: 100%;
+    height: 955px;
+    z-index: 2;
+}
+
+/*iFrame que muestra la ubicacion del local*/
+.section_2_ubication {
+    position: relative;
+    top: 80px;
+    left: 145px;
+    width: 720px;
+    height: 720px;
+}
+
+
+.section_2--article_1{
+    background-color: var(--color1);
+    width: 720px;
+    height: 86px;
+    border-radius: 0px 30px 30px 0px;
+    position: relative;
+    right: -145px;
+    top: 80px;
+    z-index: 2;
+    display: flex;
+    place-items: center;
+    justify-content: flex-end;
+}
+
+.section_2--article1_image1{
+    margin-right: 30px;
+}
+
+
+.section_2--article_1_text{
+    margin-right: 300px;
+    font-size: 30px;
+    font-family: 'Merienda One', cursive;
+}
+
+
+/*Seccion 3*/
+
+.section_3{
+    background-image: url(../img/bg3.png);
     width: 100%;
     height: 1080px;
     z-index: 1;
 }
-#Ubicacion {
-    position: relative;
-    top: 200px;
-    left: 145px;
-    width: 700px;
-    height: 700px;
-}
 
-.img2{
-    position: absolute;
-    right: 0px;
-    background-image: url(../img/Vector\ 4.png);
-    width: 833px;
-    height: 1085px;
-}
-
-.wrapper3{
-    background-image: url(../img/bg3.png);
-    width: 100%;
-    height: 1080px;
-}
-
-.img3{
+.section_3_image{
     position: absolute;
     right: 0px;
     background-image: url(../img/Vector\ 7.png);

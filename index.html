@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=firefox">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/style1.css" type="text/css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet"> 
     <title>Pagina web Mercado Cristian</title>
 </head>
 <body>
-    
     <header>
         <img src="img/logo.png" alt="logo" class="logo"> 
-            <div class="bg">
-                <div class="nav"> 
-                    <ul class="navbar">
+            <div class="nav_background">
+                <div class="nav_container"> 
+                    <ul class="nav_bar">
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#ubicacionyhorarios">Ubicacion Y Horarios</a></li>
                         <li><a href="#contacto">Contacto</a></li>
@@ -22,21 +24,20 @@
             </div>
     </header>
 
-    <div class="wrapper">
-        <img src="img/Vector 6.png" alt="dec" class="img1">
-        <div id="section">
-            <h1 class="text">Mercado Cristian</h1>
-            <h2 class="text">Balsa las perlas</h2>
-            <h2 class="text">Desde XXXX con vos</h2>
-        </div>
-    </div>
-    <div class="wrapper2">
-        <div class="img2"></div>
-            <iframe id="Ubicacion" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3101.369788751671!2d-68.1428701!3d-38.984056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x162b936c2d3e5d4a!2sMinimercado%20Cristian!5e0!3m2!1ses-419!2sar!4v1623694681705!5m2!1ses-419!2sar" loading="lazy"></iframe>
-        </div>
-    <div class="wrapper3">
-        <div class="img3"></div>
-    </div>
-    
+    <section class="section_1">
+        <article class="section_1--article_1">
+            <h1 class="article_text">Mercado Cristian</h1>
+            <h2 class="article_text">Balsa las perlas</h2>
+            <h2 class="article_text">Desde XXXX con vos</h2>
+        </article>
+    </section>
+
+    <section class="section_2">
+        <article class="section_2--article_1">
+            <p class="section_2--article_1_text">¿Donde nos ubicamos?</p>
+            <img src="img/arrow.png" class="section_2--article1_image1" alt="arrow">
+        </article>
+        <iframe class="section_2_ubication" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3101.369788751671!2d-68.1428701!3d-38.984056!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x162b936c2d3e5d4a!2sMinimercado%20Cristian!5e0!3m2!1ses-419!2sar!4v1623694681705!5m2!1ses-419!2sar" loading="lazy"></iframe>
+    </section>
 </body>
 </html>
