@@ -73,7 +73,7 @@
 }
 
 /*Banner que muestra la informacion del local*/
-#section_1--article_1{
+#section_1--Article_1{
     display: flex;
     background-color: var(--color1);
     position: absolute;
@@ -89,16 +89,16 @@
 
 .section_1--article_1_text{
     padding: 20px;
+    line-height: 31px;
     font-family: 'Roboto', cursive;
     font-weight: lighter;
+    font-size: 36px;
 }
 
 #title_Text{
     font-size: 64px;
-}
-
-.subtitle_Text{
-    font-size: 32px;
+    width: min-content;
+    line-height:normal;
 }
 
 /*Seccion 2*/
@@ -116,10 +116,11 @@
     left: 145px;
     width: 720px;
     height: 720px;
+    border-radius: 0px 0px 90px 0px;
 }
 
 
-#section_2--article_1{
+#section_2--Article_1{
     background-color: var(--color1);
     width: 720px;
     height: 86px;
@@ -133,7 +134,7 @@
     justify-content: flex-end;
 }
 
-#section_2--article1_image1{
+#section_2--Article_1_Image_1{
     margin-right: 30px;
 }
 
@@ -151,8 +152,3 @@
     width: 99.1vw;
     height: 100vh;
 }
-
-
-
-
-
