@@ -13,6 +13,7 @@ var article_1 = document.getElementById("section_1--Article_1");
 
 var article = document.createElement('article');
 
+
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
 article_1.style.border = "8px solid #DFC84F";
@@ -30,6 +31,19 @@ section_2_Article_2.style.backgroundColor = color1;
 section_2_Article_2.style.position = "absolute";
 section_2_Article_2.style.top = "169px"
 section_2_Article_2.style.left = "1048px"
+
+//informacion de contacto
+var numerotelefono = document.createTextNode("Teléfono de contacto: ");
+var section_3_Article_1 = section_3.appendChild(numerotelefono);
+numerotelefono.color1
+
+
+
+
+
+
+
+
 
 
 
