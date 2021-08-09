@@ -2,18 +2,20 @@
 *{  
     margin: 0px;
     padding: 0px;
-    
+    font-family: 'Roboto', cursive;
 }
 /* Variables de color*/
 :root{
     --color1: #DFC84F;
     --color2: #484848;
 }
-
+#header{
+    z-index: 1;
+}
 /*Barra de navegacion*/
 
 /*Contenedor de los elementos*/
-.nav_container{
+#nav_Elements{
     width: 100%;
     height: 134px;
     display: flex;
@@ -21,28 +23,20 @@
     align-items: center;
 }
 
-/*Fondo de la barra*/
-.nav_background{
-    background-image: url(../img/Vector\ 1.png);
-    width: 100%;
-    height: 342px;
-    position: absolute;
-}
-
 /*Elementos*/
-.nav_bar{
+#nav_Elements{
     list-style: none;
     margin-right: 31px;   
 }
 
-.nav_bar li {
+#nav_Elements li {
     display: inline-block;
     padding: 10px 30px;
     margin: 20px;
     transition: all 0.2s ease 0s;
 }
 
-.nav_bar li a {
+#nav_Elements li a {
     text-decoration: none;
     font-weight: bold; 
     font-size: 16px;
@@ -50,7 +44,7 @@
     font-family: 'Merienda One', cursive;
 }
 
-.nav_bar li:hover {
+#nav_Elements li:hover {
     background-color: #272727;
     border-radius: 20px;
     outline-style: solid ;
@@ -58,11 +52,11 @@
     outline-color: var(--color1);
 }
 
-.nav_bar li a {
+#nav_Elements li a {
     color: var(--color1)
 }
 
-.logo{
+#logo_Image{
     position: absolute;
     margin-right: auto;
     z-index: 2;
@@ -72,14 +66,14 @@
 
 /*Seccion 1*/
 
-.section_1{
+#section_1{
     background-image: url(../img/bg1.png);
-    width: 100%;
+    width: 99.1vw;
     height: 955px;
 }
 
 /*Banner que muestra la informacion del local*/
-.section_1--article_1{
+#section_1--Article_1{
     display: flex;
     background-color: var(--color1);
     position: absolute;
@@ -93,45 +87,40 @@
     flex-direction: column;   
 }
 
-.section_1_image{
-    position: absolute;
-    right: -0.5px;
-    top: 643px;
-}
-
-.article_text{
+.section_1--article_1_text{
     padding: 20px;
-    font-family: 'Merienda One', cursive;
+    line-height: 31px;
+    font-family: 'Roboto', cursive;
+    font-weight: lighter;
+    font-size: 36px;
 }
 
-h1{
-    font-size: 72px;
-}
-
-h2{
-    font-size: 42px;
+#title_Text{
+    font-size: 64px;
+    width: min-content;
+    line-height:normal;
 }
 
 /*Seccion 2*/
 
-.section_2{
+#section_2{
     background-image: url(../img/bg2.png);
-    width: 100%;
-    height: 955px;
-    z-index: 2;
+    height: 100vh;
+    width: 99.1vw;
 }
 
 /*iFrame que muestra la ubicacion del local*/
-.section_2_ubication {
+#section_2_ubication {
     position: relative;
     top: 80px;
     left: 145px;
     width: 720px;
     height: 720px;
+    border-radius: 0px 0px 90px 0px;
 }
 
 
-.section_2--article_1{
+#section_2--Article_1{
     background-color: var(--color1);
     width: 720px;
     height: 86px;
@@ -145,7 +134,7 @@ h2{
     justify-content: flex-end;
 }
 
-.section_2--article1_image1{
+#section_2--Article_1_Image_1{
     margin-right: 30px;
 }
 
@@ -156,24 +145,10 @@ h2{
     font-family: 'Merienda One', cursive;
 }
 
-
 /*Seccion 3*/
 
-.section_3{
+#section_3{
     background-image: url(../img/bg3.png);
-    width: 100%;
-    height: 1080px;
-    z-index: 1;
+    width: 99.1vw;
+    height: 100vh;
 }
-
-.section_3_image{
-    position: absolute;
-    right: 0px;
-    background-image: url(../img/Vector\ 7.png);
-    width: 561px;
-    height: 261px;
-}
-
-
-
-
