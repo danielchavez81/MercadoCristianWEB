@@ -9,6 +9,7 @@
     --color1: #DFC84F;
     --color2: #484848;
 }
+
 #header{
     z-index: 1;
 }
@@ -21,12 +22,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-
-/*Elementos*/
-#nav_Elements{
     list-style: none;
-    margin-right: 31px;   
+    margin-right: 31px; 
 }
 
 #nav_Elements li {
