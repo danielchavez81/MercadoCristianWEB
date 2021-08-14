@@ -37,9 +37,22 @@ section_2_Article_2.style.position = "absolute";
 section_2_Article_2.style.top = "169px";
 section_2_Article_2.style.left = "1048px";
 
+
 //informacion de contacto
 var numerotelefono = document.createTextNode("Teléfono de contacto: ");
 var section_3_Article_1 = section_3.appendChild(numerotelefono);
+
+
+//Se realizo un cambio de diseño en la pagina
+
+//Cambios al Header y a la primera seccion de la pagina
+header.style.height = "137px";
+nav_Bar.style.height = "137px";
+header.style.backgroundColor = "";
+nav_Bar.style.background = "linear-gradient(#080808, transparent)";
+
+
+
 
 
 
