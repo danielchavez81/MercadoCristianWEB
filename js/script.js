@@ -47,10 +47,20 @@ var section_3_Article_1 = section_3.appendChild(numerotelefono);
 
 //Cambios al Header y a la primera seccion de la pagina
 header.style.height = "137px";
-nav_Bar.style.height = "137px";
 header.style.backgroundColor = "";
-nav_Bar.style.background = "linear-gradient(#080808, transparent)";
+header.style.position = "relative";
 
+nav_Bar.style.height = "137px";
+nav_Bar.style.background = "linear-gradient(#080808, transparent)";
+nav_Bar.style.position = "relative";
+
+section_1.style.position = "absolute";
+section_1.style.top = "0px";
+section_1.style.height = "100vh";
+
+
+section_2.style.display = "none";
+section_3.style.display = "none";
 
 
 
