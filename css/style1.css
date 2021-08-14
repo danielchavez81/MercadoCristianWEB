@@ -41,13 +41,13 @@
     font-family: 'Merienda One', cursive;
 }
 
-#nav_Elements li:hover {
+/*#nav_Elements li:hover {
     background-color: #272727;
     border-radius: 20px;
     outline-style: solid ;
     outline-width: 3px;
     outline-color: var(--color1);
-}
+}*/
 
 #nav_Elements li a {
     color: var(--color1)
