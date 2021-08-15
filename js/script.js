@@ -22,13 +22,14 @@ var nav_Bar_Elements_container = document.getElementById("nav_Elements");
 var nav_Elements = nav_Bar_Elements_container.querySelectorAll("li");
  
 //Creacion de Elementos HTML
-var article_Section_2 = document.createElement('article');
-var div_Parent_Container_1 = document.createElement('div');
-var div_Parent_Container_2 = document.createElement('div');
-var section_Quienes_Somos = document.createElement('section');
-var article_Quienes_Somos = document.createElement('article');
-var text_Quienes_Somos = document.createElement('p');
-var div_Quienes_Somos = document.createElement('div');
+var element_Article_Section_2 = document.createElement('article');
+var element_Div_Parent_Container_1 = document.createElement('div');
+var element_Div_Parent_Container_2 = document.createElement('div');
+var element_Section_Quienes_Somos = document.createElement('section');
+var element_Article_Quienes_Somos = document.createElement('article');
+var element_Text_Quienes_Somos = document.createElement('p');
+var element_Div_Quienes_Somos = document.createElement('div');
+var element_Paragraph_Quienes_Somos = document.createElement('p');
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -42,7 +43,7 @@ nav_Bar.style.height = "148px";
 
 //Articulo Horarios
 
-var section_2_Article_2 = section_2.appendChild(article_Section_2);
+var section_2_Article_2 = section_2.appendChild(element_Article_Section_2);
 
 section_2.style.position = "relative";
 section_2_Article_2.style.width = "720px";
@@ -118,7 +119,7 @@ section_2.style.display = "none";
 section_3.style.display = "none";
 
 //Se crea un div que contiene la primera parte de la pagina para posicionar mejor los elementos
-var div_Parent_1 = document.body.appendChild(div_Parent_Container_1);
+var div_Parent_1 = document.body.appendChild(element_Div_Parent_Container_1);
 
 //Se colocan los elementos de la primera seccion como hijos del div
 div_Parent_1.appendChild(header);
@@ -129,43 +130,47 @@ div_Parent_1.style.width = "inherit";
 div_Parent_1.style.position = "relative";
 
 //Creacion de la seccion "¿quienes somos?" de la pagina
-var section_Quienes_Somos_REF = document.body.appendChild(section_Quienes_Somos);
+var section_Quienes_Somos = document.body.appendChild(element_Section_Quienes_Somos);
 
-section_Quienes_Somos_REF.style.position = "relative";
-section_Quienes_Somos_REF.style.height = "500px";
-section_Quienes_Somos_REF.style.width = "inherit"
-section_Quienes_Somos_REF.style.backgroundColor = color2;
-section_Quienes_Somos_REF.style.display = "flex";
-section_Quienes_Somos_REF.style.justifyContent = "center";
-section_Quienes_Somos_REF.style.alignItems = "center";
+section_Quienes_Somos.style.position = "relative";
+section_Quienes_Somos.style.height = "500px";
+section_Quienes_Somos.style.width = "inherit"
+section_Quienes_Somos.style.backgroundColor = color2;
+section_Quienes_Somos.style.display = "flex";
+section_Quienes_Somos.style.justifyContent = "center";
+section_Quienes_Somos.style.alignItems = "center";
 
 //Div Parent 2
-var div_Parent_2 = document.body.appendChild(div_Parent_Container_2);
+var div_Parent_2 = document.body.appendChild(element_Div_Parent_Container_2);
 
-div_Parent_2.appendChild(section_Quienes_Somos_REF);
+div_Parent_2.appendChild(section_Quienes_Somos);
 div_Parent_2.style.position = "relative";
 
 //Se crea el articulo ¿Quienes somos? y se coloca dentro de la seccion como hijo
-var article_Quienes_Somos_REF = section_Quienes_Somos_REF.appendChild(article_Quienes_Somos);
+var article_Quienes_Somos = section_Quienes_Somos.appendChild(element_Article_Quienes_Somos);
 
-article_Quienes_Somos_REF.style.width = "543px";
-article_Quienes_Somos_REF.style.height = "316px";
-article_Quienes_Somos_REF.style.border = "10px solid #DFC84F"
-article_Quienes_Somos_REF.style.display = "grid";
-article_Quienes_Somos_REF.style.placeContent = "center";
-article_Quienes_Somos_REF.style.justifyContent = "center";
+article_Quienes_Somos.style.width = "543px";
+article_Quienes_Somos.style.height = "316px";
+article_Quienes_Somos.style.border = "10px solid #DFC84F"
+article_Quienes_Somos.style.display = "grid";
+article_Quienes_Somos.style.placeContent = "center";
+article_Quienes_Somos.style.justifyContent = "center";
 
 //creacion del texto ¿Quienes somos?
-var text_Quienes_Somos_REF = article_Quienes_Somos_REF.appendChild(text_Quienes_Somos);
+var text_Quienes_Somos = article_Quienes_Somos.appendChild(element_Text_Quienes_Somos);
 
-text_Quienes_Somos_REF.innerHTML = "¿Quienes Somos?";
-text_Quienes_Somos_REF.style.color = "white";
-text_Quienes_Somos_REF.style.fontSize = "72px";
-text_Quienes_Somos_REF.style.width = "min-content";
+text_Quienes_Somos.innerHTML = "¿Quienes Somos?";
+text_Quienes_Somos.style.color = "white";
+text_Quienes_Somos.style.fontSize = "72px";
+text_Quienes_Somos.style.width = "min-content";
 
 //Creacion del parrafo de la informacion del local
 
+var paragraph_Quienes_Somos = section_Quienes_Somos.appendChild(element_Paragraph_Quienes_Somos);
 
-
-
+paragraph_Quienes_Somos.innerHTML = "Bienvenido a nuestra pagina web! Somos un local ubicado en Balsa Las Perlas, nos especializamos en venta minorista de productos de almacen como pueden ser lacteos, bebidas, golosinas y todo lo que necesitas para tu hogar.";
+paragraph_Quienes_Somos.style.color = "white";
+paragraph_Quienes_Somos.style.fontSize = "36px";
+paragraph_Quienes_Somos.style.width = "880px";
+paragraph_Quienes_Somos.style.margin = "0px 40px";
 
