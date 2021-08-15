@@ -1,7 +1,7 @@
 //Variables de color
 var color1 = "#DFC84F"
 var color2 = "#080808"
-
+//Ajustes al body
 document.body.style.height = "100vh";
 document.body.style.width = "100vw";
 document.body.style.overflowX = "hidden";
@@ -20,16 +20,25 @@ var article_1_Texts = article_1.querySelectorAll("p");
 var nav_Bar = document.getElementById("nav_Bar"); 
 var nav_Bar_Elements_container = document.getElementById("nav_Elements");
 var nav_Elements = nav_Bar_Elements_container.querySelectorAll("li");
+
+var element_IFrame_Ubicacion = document.getElementById("section_2_ubication");
  
 //Creacion de Elementos HTML
 var element_Article_Section_2 = document.createElement('article');
+
 var element_Div_Parent_Container_1 = document.createElement('div');
 var element_Div_Parent_Container_2 = document.createElement('div');
+var element_Div_Parent_Container_3 = document.createElement('div');
+
 var element_Section_Quienes_Somos = document.createElement('section');
 var element_Article_Quienes_Somos = document.createElement('article');
 var element_Text_Quienes_Somos = document.createElement('p');
 var element_Div_Quienes_Somos = document.createElement('div');
 var element_Paragraph_Quienes_Somos = document.createElement('p');
+
+var element_Section_Ubicacion = document.createElement('section');
+var element_Article_Ubicacion = document.createElement('article');
+var element_Text_Ubicacion = document.createElement('p');
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -173,4 +182,53 @@ paragraph_Quienes_Somos.style.color = "white";
 paragraph_Quienes_Somos.style.fontSize = "36px";
 paragraph_Quienes_Somos.style.width = "880px";
 paragraph_Quienes_Somos.style.margin = "0px 40px";
+
+//Div parent 3
+var div_Parent_3 = document.body.appendChild(element_Div_Parent_Container_3);
+
+div_Parent_3.style.height = "100vh";
+div_Parent_3.style.width = "inherit";
+
+//Section ubicacion
+var section_Ubicacion = div_Parent_3.appendChild(element_Section_Ubicacion);
+
+section_Ubicacion.style.height = "100vh";
+section_Ubicacion.style.width = "inherit";
+section_Ubicacion.style.backgroundImage = "url(img/bg2.png)";
+section_Ubicacion.style.display = "flex";
+section_Ubicacion.style.alignItems = "center";
+section_Ubicacion.style.justifyContent = "flex-end";
+section_Ubicacion.style.padding = "130px";
+
+//iFrame Ubicacion
+
+var iframe_Ubicacion = section_Ubicacion.appendChild(element_IFrame_Ubicacion);
+
+iframe_Ubicacion.style.width = "990px";
+iframe_Ubicacion.style.height = "780px";
+iframe_Ubicacion.style.flexShrink = "0";
+iframe_Ubicacion.style.margin = "0px 100px";
+
+//Article Ubicacion
+
+var article_Ubicacion = section_Ubicacion.appendChild(element_Article_Ubicacion);
+
+article_Ubicacion.style.width = "540px";
+article_Ubicacion.style.height = "500px";
+article_Ubicacion.style.border = "10px solid #DFC84F"
+article_Ubicacion.style.flexShrink = "0";
+article_Ubicacion.style.display = "grid";
+article_Ubicacion.style.placeItems = "center";
+
+var text_Ubicacion = article_Ubicacion.appendChild(element_Text_Ubicacion);
+
+text_Ubicacion.innerHTML = "¿Donde nos ubicamos?";
+
+text_Ubicacion.style.color = "white";
+text_Ubicacion.style.fontSize = "90px";
+text_Ubicacion.style.width = "462px";
+text_Ubicacion.style.height = "321px";
+text_Ubicacion.style.marginBottom = "90px";
+
+
 
