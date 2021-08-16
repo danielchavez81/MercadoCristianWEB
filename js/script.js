@@ -50,6 +50,12 @@ var element_Text_Horarios_3 = document.createElement("p");
 
 var element_Footer = document.createElement('footer');
 var element_Footer_Text = document.createElement('p');
+var element_Footer_Facebook_Image = document.createElement('img');
+var element_Footer_PhoneNumber_Image = document.createElement('img');
+var element_Footer_Instagram_Image = document.createElement('img');
+var element_Footer_Email_Image = document.createElement('img');
+var element_Footer_Like_Image = document.createElement('img');
+
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -304,3 +310,20 @@ footer_Text.style.fontSize = "45px";
 footer_Text.style.color = "white";
 footer_Text.style.marginLeft = "50px";
 
+//Footer images
+var footer_Facebook_Image = footer.appendChild(element_Footer_Facebook_Image);
+var footer_PhoneNumber_Image = footer.appendChild(element_Footer_PhoneNumber_Image);
+var footer_Email_Image = footer.appendChild(element_Footer_Email_Image);
+var footer_Instagram_Image = footer.appendChild(element_Footer_Instagram_Image);
+var footer_Like_Image = footer.appendChild(element_Footer_Like_Image);
+
+footer_Facebook_Image.src="img/facebookIcon.png";
+footer_PhoneNumber_Image.src="img/phoneIcon.png";
+footer_Email_Image.src="img/EmailIcon.png";
+footer_Instagram_Image.src="img/InstagramIcon.png";
+footer_Like_Image.src="img/likeIcon.png";
+
+
+
+footer_Facebook_Image.style.marginLeft = "100px";
+footer_Facebook_Image.style.marginTop = "-5px";
