@@ -42,8 +42,9 @@ var element_Article_Ubicacion = document.createElement('article');
 var element_Text_Ubicacion = document.createElement('p');
 
 var element_Section_Horarios = document.createElement('section');
-var element_Text_Horarios = document.createElement('p');
-
+var element_Text_Horarios_1 = document.createElement("p");
+var element_Text_Horarios_2 = document.createElement("p");
+var element_Text_Horarios_3 = document.createElement("p");
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -241,15 +242,36 @@ var div_Parent_4 = document.body.appendChild(element_Div_Parent_Container_4);
 
 div_Parent_4.style.width = "inherit";
 div_Parent_4.style.height = "100vh";
+div_Parent_4.style.position = "relative";
 
+//Section Horarios
 var section_Horarios = div_Parent_4.appendChild(element_Section_Horarios);
 
 section_Horarios.style.width = "inherit";
 section_Horarios.style.height = "100vh";
 section_Horarios.style.backgroundImage = "url(img/bg3.png)";
+section_Horarios.style.position = "absolute";
+section_Horarios.style.display = "flex";
+section_Horarios.style.flexDirection = "column";
+section_Horarios.style.justifyContent = "center";
+section_Horarios.style.alignItems = "flex-start";
 
-var text_Horarios = section_Horarios.appendChild(element_Text_Horarios);
+var text_Title_Horarios = section_Horarios.appendChild(element_Text_Horarios_1);
+var text_Subtitle_1_Horarios = section_Horarios.appendChild(element_Text_Horarios_2);
+var text_Subtitle_2_Horarios = section_Horarios.appendChild(element_Text_Horarios_3);
 
 
+text_Title_Horarios.style.fontSize = "96px";
+text_Title_Horarios.innerHTML = "Nuestros horarios son:"
+text_Title_Horarios.style.width = "max-content";
+text_Title_Horarios.style.marginLeft = "160px"
 
+text_Subtitle_1_Horarios.style.fontSize = "72px";
+text_Subtitle_1_Horarios.innerHTML = "-De 00:00 a 00:00 de Lunes a Sabado.";
+text_Subtitle_1_Horarios.style.width = "830px";
+text_Subtitle_1_Horarios.style.marginLeft = "160px"
 
+text_Subtitle_2_Horarios.style.fontSize = "72px";
+text_Subtitle_2_Horarios.innerHTML = "-De 00:00 a 00:00 los Domingos.";
+text_Subtitle_2_Horarios.style.width = "830px";
+text_Subtitle_2_Horarios.style.marginLeft = "160px"
