@@ -16,7 +16,11 @@ var section_3 = document.getElementById("section_3");
 
 var article_1 = document.getElementById("section_1--Article_1");
 var article_1_Title_Text = document.getElementById("title_Text");
+var article_1_Element_Inicio = document.getElementById("Element_Inicio");
+var article_1_Element_Ubicacion = document.getElementById("Element_Ubicacion");
+var article_1_Element_Contacto = document.getElementById("Element_Contacto");
 var article_1_Texts = article_1.querySelectorAll("p");
+
 
 var nav_Bar = document.getElementById("nav_Bar"); 
 var nav_Bar_Elements_container = document.getElementById("nav_Elements");
@@ -54,7 +58,7 @@ var element_Footer_Facebook_Image = document.createElement("img");
 var element_Footer_PhoneNumber_Image = document.createElement("img");
 var element_Footer_Instagram_Image = document.createElement("img");
 var element_Footer_Email_Image = document.createElement("img");
-var element_Footer_Like_Image = document.createElement("img");
+var element_Footer_Facebook_Link = document.createElement("a");
 
 
 //Cambios al CSS
@@ -98,6 +102,8 @@ nav_Bar.style.background = "linear-gradient(#080808, transparent)";
 nav_Bar.style.position = "relative";
 nav_Bar.style.display = "flex";
 nav_Bar.style.justifyContent = "flex-end";
+
+article_1_Title_Text.style.fontFamily = "Merienda One";
 
 //Efecto Hover a los elementos de la barra de navegacion
 for(var x = 0; x < nav_Elements.length; x++){
@@ -316,7 +322,6 @@ var footer_Facebook_Image = footer.appendChild(element_Footer_Facebook_Image);
 var footer_PhoneNumber_Image = footer.appendChild(element_Footer_PhoneNumber_Image);
 var footer_Email_Image = footer.appendChild(element_Footer_Email_Image);
 var footer_Instagram_Image = footer.appendChild(element_Footer_Instagram_Image);
-var footer_Like_Image = footer.appendChild(element_Footer_Like_Image);
 
 footer_Facebook_Image.src="img/facebookIcon.png";
 footer_PhoneNumber_Image.src="img/phoneIcon.png";
@@ -337,3 +342,10 @@ footer_Email_Image.style.marginLeft="40px";
 
 footer_Instagram_Image.style.marginTop="-3px";
 footer_Instagram_Image.style.marginLeft="120px";
+
+//links
+var footer_Facebook_Link = footer_Facebook_Image.appendChild(element_Footer_Facebook_Link)
+footer_Facebook_Link.href = "https://www.facebook.com/cristian.caniulef.5";
+footer_Facebook_Image.onclick=function(){
+
+}
