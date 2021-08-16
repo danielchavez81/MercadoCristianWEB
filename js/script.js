@@ -29,6 +29,7 @@ var element_Article_Section_2 = document.createElement('article');
 var element_Div_Parent_Container_1 = document.createElement('div');
 var element_Div_Parent_Container_2 = document.createElement('div');
 var element_Div_Parent_Container_3 = document.createElement('div');
+var element_Div_Parent_Container_4 = document.createElement('div');
 
 var element_Section_Quienes_Somos = document.createElement('section');
 var element_Article_Quienes_Somos = document.createElement('article');
@@ -39,6 +40,10 @@ var element_Paragraph_Quienes_Somos = document.createElement('p');
 var element_Section_Ubicacion = document.createElement('section');
 var element_Article_Ubicacion = document.createElement('article');
 var element_Text_Ubicacion = document.createElement('p');
+
+var element_Section_Horarios = document.createElement('section');
+var element_Text_Horarios = document.createElement('p');
+
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -229,6 +234,22 @@ text_Ubicacion.style.fontSize = "90px";
 text_Ubicacion.style.width = "462px";
 text_Ubicacion.style.height = "321px";
 text_Ubicacion.style.marginBottom = "90px";
+
+//Div parent 4
+
+var div_Parent_4 = document.body.appendChild(element_Div_Parent_Container_4);
+
+div_Parent_4.style.width = "inherit";
+div_Parent_4.style.height = "100vh";
+
+var section_Horarios = div_Parent_4.appendChild(element_Section_Horarios);
+
+section_Horarios.style.width = "inherit";
+section_Horarios.style.height = "100vh";
+section_Horarios.style.backgroundImage = "url(img/bg3.png)";
+
+var text_Horarios = section_Horarios.appendChild(element_Text_Horarios);
+
 
 
 
