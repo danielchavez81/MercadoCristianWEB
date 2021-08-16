@@ -50,11 +50,11 @@ var element_Text_Horarios_3 = document.createElement("p");
 
 var element_Footer = document.createElement('footer');
 var element_Footer_Text = document.createElement('p');
-var element_Footer_Facebook_Image = document.createElement('img');
-var element_Footer_PhoneNumber_Image = document.createElement('img');
-var element_Footer_Instagram_Image = document.createElement('img');
-var element_Footer_Email_Image = document.createElement('img');
-var element_Footer_Like_Image = document.createElement('img');
+var element_Footer_Facebook_Image = document.createElement("img");
+var element_Footer_PhoneNumber_Image = document.createElement("img");
+var element_Footer_Instagram_Image = document.createElement("img");
+var element_Footer_Email_Image = document.createElement("img");
+var element_Footer_Like_Image = document.createElement("img");
 
 
 //Cambios al CSS
@@ -306,9 +306,10 @@ footer.style.alignItems = "center";
 var footer_Text = footer.appendChild(element_Footer_Text);
 
 footer_Text.innerHTML = "Mercado Cristian";
-footer_Text.style.fontSize = "45px";
+footer_Text.style.fontSize = "30px";
 footer_Text.style.color = "white";
 footer_Text.style.marginLeft = "50px";
+footer_Text.style.marginTop = "15px";
 
 //Footer images
 var footer_Facebook_Image = footer.appendChild(element_Footer_Facebook_Image);
@@ -319,11 +320,20 @@ var footer_Like_Image = footer.appendChild(element_Footer_Like_Image);
 
 footer_Facebook_Image.src="img/facebookIcon.png";
 footer_PhoneNumber_Image.src="img/phoneIcon.png";
-footer_Email_Image.src="img/EmailIcon.png";
-footer_Instagram_Image.src="img/InstagramIcon.png";
-footer_Like_Image.src="img/likeIcon.png";
+footer_Email_Image.src="img/emailIcon.png";
+footer_Instagram_Image.src="img/instagramIcon.png";
 
 
 
-footer_Facebook_Image.style.marginLeft = "100px";
-footer_Facebook_Image.style.marginTop = "-5px";
+//Images Location
+footer_Facebook_Image.style.marginLeft = "230px";
+footer_Facebook_Image.style.marginTop = "-3px";
+
+footer_PhoneNumber_Image.style.marginTop="-3px";
+footer_PhoneNumber_Image.style.marginLeft="-230px";
+
+footer_Email_Image.style.marginTop="-3px";
+footer_Email_Image.style.marginLeft="40px";
+
+footer_Instagram_Image.style.marginTop="-3px";
+footer_Instagram_Image.style.marginLeft="120px";
