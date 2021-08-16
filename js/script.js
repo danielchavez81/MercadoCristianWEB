@@ -5,6 +5,7 @@ var color2 = "#080808"
 document.body.style.height = "100vh";
 document.body.style.width = "100vw";
 document.body.style.overflowX = "hidden";
+document.body.style.fontFamily = "Roboto, ";
 
 // Referencias a los elementos de HTML
 var header = document.getElementById("header");
@@ -30,6 +31,7 @@ var element_Div_Parent_Container_1 = document.createElement('div');
 var element_Div_Parent_Container_2 = document.createElement('div');
 var element_Div_Parent_Container_3 = document.createElement('div');
 var element_Div_Parent_Container_4 = document.createElement('div');
+var element_Div_Parent_Container_5 = document.createElement('div');
 
 var element_Section_Quienes_Somos = document.createElement('section');
 var element_Article_Quienes_Somos = document.createElement('article');
@@ -45,6 +47,9 @@ var element_Section_Horarios = document.createElement('section');
 var element_Text_Horarios_1 = document.createElement("p");
 var element_Text_Horarios_2 = document.createElement("p");
 var element_Text_Horarios_3 = document.createElement("p");
+
+var element_Footer = document.createElement('footer');
+var element_Footer_Text = document.createElement('p');
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -72,7 +77,6 @@ section_2_Article_2.style.left = "1048px";
 
 var numerotelefono = document.createTextNode("Teléfono de contacto: ");
 var section_3_Article_1 = section_3.appendChild(numerotelefono);
-
 
 //Se realizo un cambio de diseño en la pagina
 
@@ -256,10 +260,10 @@ section_Horarios.style.flexDirection = "column";
 section_Horarios.style.justifyContent = "center";
 section_Horarios.style.alignItems = "flex-start";
 
+//Texts Horarios
 var text_Title_Horarios = section_Horarios.appendChild(element_Text_Horarios_1);
 var text_Subtitle_1_Horarios = section_Horarios.appendChild(element_Text_Horarios_2);
 var text_Subtitle_2_Horarios = section_Horarios.appendChild(element_Text_Horarios_3);
-
 
 text_Title_Horarios.style.fontSize = "96px";
 text_Title_Horarios.innerHTML = "Nuestros horarios son:"
@@ -275,3 +279,28 @@ text_Subtitle_2_Horarios.style.fontSize = "72px";
 text_Subtitle_2_Horarios.innerHTML = "-De 00:00 a 00:00 los Domingos.";
 text_Subtitle_2_Horarios.style.width = "830px";
 text_Subtitle_2_Horarios.style.marginLeft = "160px"
+
+//Div Parent 5
+
+var div_Parent_5 = document.body.appendChild(element_Div_Parent_Container_5);
+
+div_Parent_5.style.width = "100vw";
+div_Parent_5.style.height = "120px";
+
+//Footer
+var footer = div_Parent_5.appendChild(element_Footer);
+
+footer.style.width = "100vw";
+footer.style.height = "120px";
+footer.style.backgroundColor = "#080808";
+footer.style.display = "flex";
+footer.style.alignItems = "center";
+
+//Footer Text
+var footer_Text = footer.appendChild(element_Footer_Text);
+
+footer_Text.innerHTML = "Mercado Cristian";
+footer_Text.style.fontSize = "45px";
+footer_Text.style.color = "white";
+footer_Text.style.marginLeft = "50px";
+
