@@ -59,8 +59,7 @@ var element_Footer_PhoneNumber_Image = document.createElement("img");
 var element_Footer_Instagram_Image = document.createElement("img");
 var element_Footer_Email_Image = document.createElement("img");
 var element_Footer_Facebook_Link = document.createElement("a");
-
-
+var element_Footer_Instagram_Link = document.createElement("a");
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
 article_1.style.border = "8px solid #DFC84F";
@@ -343,9 +342,14 @@ footer_Email_Image.style.marginLeft="40px";
 footer_Instagram_Image.style.marginTop="-3px";
 footer_Instagram_Image.style.marginLeft="120px";
 
-//links
-var footer_Facebook_Link = footer_Facebook_Image.appendChild(element_Footer_Facebook_Link)
-footer_Facebook_Link.href = "https://www.facebook.com/cristian.caniulef.5";
-footer_Facebook_Image.onclick=function(){
 
-}
+//links
+var footer_Facebook_Link = footer_Facebook_Image.appendChild(element_Footer_Facebook_Link);
+element_Footer_Facebook_Image.onclick = function(){
+    window.location.href = 'https://www.facebook.com/cristian.caniulef.5';
+};
+
+var footer_Instagram_Link = footer_Instagram_Image.appendChild(element_Footer_Instagram_Link);
+element_Footer_Instagram_Image.onclick = function(){
+    window.location.href = 'https://www.instagram.com/caniulefc/';
+};
