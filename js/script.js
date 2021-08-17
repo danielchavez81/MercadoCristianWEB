@@ -50,6 +50,8 @@ var element_Text_Horarios_3 = document.createElement("p");
 
 var element_Footer = document.createElement('footer');
 var element_Footer_Text = document.createElement('p');
+var element_Footer_Phone_Icon = document.createElement('img');
+
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -295,6 +297,7 @@ footer.style.height = "120px";
 footer.style.backgroundColor = "#080808";
 footer.style.display = "flex";
 footer.style.alignItems = "center";
+footer.style.justifyContent = "flex-start";
 
 //Footer Text
 var footer_Text = footer.appendChild(element_Footer_Text);
@@ -302,5 +305,28 @@ var footer_Text = footer.appendChild(element_Footer_Text);
 footer_Text.innerHTML = "Mercado Cristian";
 footer_Text.style.fontSize = "45px";
 footer_Text.style.color = "white";
-footer_Text.style.marginLeft = "50px";
+footer_Text.style.margin = "0px 0px 0px 50px";
+
+
+//Footer Icons
+
+var footer_Phone_Icon = footer.appendChild(element_Footer_Phone_Icon);
+
+footer_Phone_Icon.src = "img/phoneIcon.png";
+footer_Phone_Icon.alt = "phone";
+footer_Phone_Icon.style.margin = "0px 30px";
+footer_Phone_Icon.style.zIndex = "0"
+
+footer_Phone_Icon.onmouseover = function mouse_Over(){
+    this.style.border = "4px solid outer #DFC84F";
+    this.style.boxShadow = "1px 10px 10px black"
+    //footer_Phone_Icon_Pop_Up.style.display = "inline";
+}
+footer_Phone_Icon.onmouseout = function mouse_Leave(){
+    this.style.border = "";
+    this.style.boxShadow = "";
+    //footer_Phone_Icon_Pop_Up.style.display = "none";
+}
+
+
 
