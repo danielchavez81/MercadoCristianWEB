@@ -60,6 +60,9 @@ var element_Footer_Instagram_Image = document.createElement("img");
 var element_Footer_Email_Image = document.createElement("img");
 var element_Footer_Facebook_Link = document.createElement("a");
 var element_Footer_Instagram_Link = document.createElement("a");
+var element_Footer_Email_Link = document.createElement("a");
+var element_Footer_PhoneNumber_Link = document.createElement("a");
+var element_Footer_Email_Link = document.createElement("iframe");
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
 article_1.style.border = "8px solid #DFC84F";
@@ -81,11 +84,6 @@ section_2_Article_2.style.backgroundColor = color1;
 section_2_Article_2.style.position = "absolute";
 section_2_Article_2.style.top = "169px";
 section_2_Article_2.style.left = "1048px";
-
-//informacion de contacto
-
-var numerotelefono = document.createTextNode("Teléfono de contacto: ");
-var section_3_Article_1 = section_3.appendChild(numerotelefono);
 
 //Se realizo un cambio de diseño en la pagina
 
@@ -343,10 +341,21 @@ footer_Instagram_Image.style.marginTop="-3px";
 footer_Instagram_Image.style.marginLeft="120px";
 
 
-//links
+//botones del footer
 var footer_Facebook_Link = footer_Facebook_Image.appendChild(element_Footer_Facebook_Link);
 element_Footer_Facebook_Image.onclick = function(){
     window.location.href = 'https://www.facebook.com/cristian.caniulef.5';
+};
+
+var footer_Instagram_Link = footer_Instagram_Image.appendChild(element_Footer_Instagram_Link);
+element_Footer_Instagram_Image.onclick = function(){
+    window.location.href = 'https://www.instagram.com/caniulefc/';
+};
+ 
+
+var footer_Email_Link = footer_Email_Image.appendChild(element_Footer_Email_Link);
+element_Footer_Email_Image.onclick = function(){
+    window.open('mailto:santiago.cappelluti@hotmail.com');
 };
 
 var footer_Instagram_Link = footer_Instagram_Image.appendChild(element_Footer_Instagram_Link);
