@@ -16,7 +16,11 @@ var section_3 = document.getElementById("section_3");
 
 var article_1 = document.getElementById("section_1--Article_1");
 var article_1_Title_Text = document.getElementById("title_Text");
+var article_1_Element_Inicio = document.getElementById("Element_Inicio");
+var article_1_Element_Ubicacion = document.getElementById("Element_Ubicacion");
+var article_1_Element_Contacto = document.getElementById("Element_Contacto");
 var article_1_Texts = article_1.querySelectorAll("p");
+
 
 var nav_Bar = document.getElementById("nav_Bar"); 
 var nav_Bar_Elements_container = document.getElementById("nav_Elements");
@@ -51,7 +55,16 @@ var element_Text_Horarios_3 = document.createElement("p");
 var element_Footer = document.createElement('footer');
 var element_Footer_Text = document.createElement('p');
 var element_Footer_Phone_Icon = document.createElement('img');
-
+var element_Footer_Facebook_Image = document.createElement("img");
+var element_Footer_PhoneNumber_Image = document.createElement("img");
+var element_Footer_Instagram_Image = document.createElement("img");
+var element_Footer_Email_Image = document.createElement("img");
+var element_Footer_Facebook_Link = document.createElement("a");
+var element_Footer_Instagram_Link = document.createElement("a");
+var element_Footer_Email_Link = document.createElement("a");
+var element_Footer_PhoneNumber_Link = document.createElement("a");
+var element_Footer_Email_Link = document.createElement("a");
+var element_Footer_PhoneNumber_Link = document.createElement("a");
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -75,11 +88,6 @@ section_2_Article_2.style.position = "absolute";
 section_2_Article_2.style.top = "169px";
 section_2_Article_2.style.left = "1048px";
 
-//informacion de contacto
-
-var numerotelefono = document.createTextNode("Teléfono de contacto: ");
-var section_3_Article_1 = section_3.appendChild(numerotelefono);
-
 //Se realizo un cambio de diseño en la pagina
 
 //Cambios al Header y a la primera seccion de la pagina
@@ -94,6 +102,8 @@ nav_Bar.style.background = "linear-gradient(#080808, transparent)";
 nav_Bar.style.position = "relative";
 nav_Bar.style.display = "flex";
 nav_Bar.style.justifyContent = "flex-end";
+
+article_1_Title_Text.style.fontFamily = "Merienda One";
 
 //Efecto Hover a los elementos de la barra de navegacion
 for(var x = 0; x < nav_Elements.length; x++){
@@ -303,7 +313,7 @@ footer.style.justifyContent = "flex-start";
 var footer_Text = footer.appendChild(element_Footer_Text);
 
 footer_Text.innerHTML = "Mercado Cristian";
-footer_Text.style.fontSize = "45px";
+footer_Text.style.fontSize = "30px";
 footer_Text.style.color = "white";
 footer_Text.style.margin = "0px 0px 0px 50px";
 
@@ -328,5 +338,51 @@ footer_Phone_Icon.onmouseout = function mouse_Leave(){
     //footer_Phone_Icon_Pop_Up.style.display = "none";
 }
 
+footer_Text.style.marginLeft = "50px";
+footer_Text.style.marginTop = "15px";
+
+//Footer images
+var footer_Facebook_Image = footer.appendChild(element_Footer_Facebook_Image);
+var footer_PhoneNumber_Image = footer.appendChild(element_Footer_PhoneNumber_Image);
+var footer_Email_Image = footer.appendChild(element_Footer_Email_Image);
+var footer_Instagram_Image = footer.appendChild(element_Footer_Instagram_Image);
+
+footer_Facebook_Image.src="img/facebookIcon.png";
+footer_PhoneNumber_Image.src="img/phoneIcon.png";
+footer_Email_Image.src="img/emailIcon.png";
+footer_Instagram_Image.src="img/instagramIcon.png";
+
+//Images Location
+footer_Facebook_Image.style.marginLeft = "230px";
+footer_Facebook_Image.style.marginTop = "-3px";
+
+footer_PhoneNumber_Image.style.marginTop="-3px";
+footer_PhoneNumber_Image.style.marginLeft="-230px";
+
+footer_Email_Image.style.marginTop="-3px";
+footer_Email_Image.style.marginLeft="40px";
+
+footer_Instagram_Image.style.marginTop="-3px";
+footer_Instagram_Image.style.marginLeft="120px";
 
 
+//botones del footer
+var footer_Facebook_Link = footer_Facebook_Image.appendChild(element_Footer_Facebook_Link);
+element_Footer_Facebook_Image.onclick = function(){
+    window.location.href = 'https://www.facebook.com/cristian.caniulef.5';
+};
+
+var footer_Instagram_Link = footer_Instagram_Image.appendChild(element_Footer_Instagram_Link);
+element_Footer_Instagram_Image.onclick = function(){
+    window.location.href = 'https://www.instagram.com/caniulefc/';
+};
+ 
+
+var footer_Email_Link = footer_Email_Image.appendChild(element_Footer_Email_Link);
+element_Footer_Email_Image.onclick = function(){
+    window.open('mailto:marcado.cristian.shippuden@gmail.com');
+};
+
+var footer_PhoneNumber_Link = footer_PhoneNumber_Image.appendChild(element_Footer_PhoneNumber_Link);
+element_Footer_PhoneNumber_Image.onclick = function(){window.open('tel:+54 9 2996 54-4678');
+};
