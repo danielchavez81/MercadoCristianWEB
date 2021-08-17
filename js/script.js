@@ -353,12 +353,13 @@ element_Footer_Instagram_Image.onclick = function(){
     window.location.href = 'https://www.instagram.com/caniulefc/';
 };
  
-
 var footer_Email_Link = footer_Email_Image.appendChild(element_Footer_Email_Link);
 element_Footer_Email_Image.onclick = function(){
     window.open('mailto:marcado.cristian.shippuden@gmail.com');
 };
 
 var footer_PhoneNumber_Link = footer_PhoneNumber_Image.appendChild(element_Footer_PhoneNumber_Link);
-element_Footer_PhoneNumber_Image.onclick = function(){window.open('tel:+54 9 2996 54-4678');
-};
+var user_Agent;
+if(/Android|iPhone|Windows Phone/.test(navigator.userAgent)){
+
+element_Footer_PhoneNumber_Image.onclick = function(){window.open('tel:+54 9 2996 54-4678')}}
