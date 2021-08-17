@@ -62,7 +62,8 @@ var element_Footer_Facebook_Link = document.createElement("a");
 var element_Footer_Instagram_Link = document.createElement("a");
 var element_Footer_Email_Link = document.createElement("a");
 var element_Footer_PhoneNumber_Link = document.createElement("a");
-var element_Footer_Email_Link = document.createElement("iframe");
+var element_Footer_Email_Link = document.createElement("a");
+var element_Footer_PhoneNumber_Link = document.createElement("a");
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
 article_1.style.border = "8px solid #DFC84F";
@@ -355,10 +356,9 @@ element_Footer_Instagram_Image.onclick = function(){
 
 var footer_Email_Link = footer_Email_Image.appendChild(element_Footer_Email_Link);
 element_Footer_Email_Image.onclick = function(){
-    window.open('mailto:santiago.cappelluti@hotmail.com');
+    window.open('mailto:marcado.cristian.shippuden@gmail.com');
 };
 
-var footer_Instagram_Link = footer_Instagram_Image.appendChild(element_Footer_Instagram_Link);
-element_Footer_Instagram_Image.onclick = function(){
-    window.location.href = 'https://www.instagram.com/caniulefc/';
+var footer_PhoneNumber_Link = footer_PhoneNumber_Image.appendChild(element_Footer_PhoneNumber_Link);
+element_Footer_PhoneNumber_Image.onclick = function(){window.open('tel:+54 9 2996 54-4678');
 };
