@@ -26,8 +26,6 @@ var nav_Bar = document.getElementById("nav_Bar");
 var nav_Bar_Elements_container = document.getElementById("nav_Elements");
 var nav_Elements = nav_Bar_Elements_container.querySelectorAll("li");
 
-var element_IFrame_Ubicacion = document.getElementById("section_2_ubication");
- 
 //Creacion de Elementos HTML
 var element_Article_Section_2 = document.createElement('article');
 
@@ -50,7 +48,6 @@ var element_Text_Ubicacion = document.createElement('p');
 var element_Section_Horarios = document.createElement('section');
 var element_Text_Horarios_1 = document.createElement("p");
 var element_Text_Horarios_2 = document.createElement("p");
-var element_Text_Horarios_3 = document.createElement("p");
 
 var element_Footer = document.createElement('footer');
 var element_Footer_Text = document.createElement('p');
@@ -65,6 +62,8 @@ var element_Footer_Email_Link = document.createElement("a");
 var element_Footer_PhoneNumber_Link = document.createElement("a");
 var element_Footer_Email_Link = document.createElement("a");
 var element_Footer_PhoneNumber_Link = document.createElement("a");
+var element_Footer_Logo_Image = document.createElement("img");
+var element_Footer_Maps_Frame = document.getElementById("Maps_Frame");
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -72,23 +71,11 @@ article_1.style.border = "8px solid #DFC84F";
 header.style.backgroundColor = "#484848";
     //ajuste de secciones
 section_1.style.position = "relative";
+section_1.style.display = "flex";
+section_1.style.flexDirection= "row";
 section_1.style.height = "calc(100vh - 148px)";
 header.style.height = "148px";
 nav_Bar.style.height = "148px";
-
-//Articulo Horarios
-
-var section_2_Article_2 = section_2.appendChild(element_Article_Section_2);
-
-section_2.style.position = "relative";
-section_2_Article_2.style.width = "720px";
-section_2_Article_2.style.height = "720px";
-section_2_Article_2.style.backgroundColor = color1;
-section_2_Article_2.style.position = "absolute";
-section_2_Article_2.style.top = "169px";
-section_2_Article_2.style.left = "1048px";
-
-//Se realizo un cambio de diseño en la pagina
 
 //Cambios al Header y a la primera seccion de la pagina
 header.style.height = "137px";
@@ -222,15 +209,6 @@ section_Ubicacion.style.alignItems = "center";
 section_Ubicacion.style.justifyContent = "flex-end";
 section_Ubicacion.style.padding = "130px";
 
-//iFrame Ubicacion
-
-var iframe_Ubicacion = section_Ubicacion.appendChild(element_IFrame_Ubicacion);
-
-iframe_Ubicacion.style.width = "990px";
-iframe_Ubicacion.style.height = "780px";
-iframe_Ubicacion.style.flexShrink = "0";
-iframe_Ubicacion.style.margin = "0px 100px";
-
 //Article Ubicacion
 
 var article_Ubicacion = section_Ubicacion.appendChild(element_Article_Ubicacion);
@@ -241,6 +219,7 @@ article_Ubicacion.style.border = "10px solid #DFC84F"
 article_Ubicacion.style.flexShrink = "0";
 article_Ubicacion.style.display = "grid";
 article_Ubicacion.style.placeItems = "center";
+article_Ubicacion.style.marginLeft = "20px"
 
 var text_Ubicacion = article_Ubicacion.appendChild(element_Text_Ubicacion);
 
@@ -275,22 +254,16 @@ section_Horarios.style.alignItems = "flex-start";
 //Texts Horarios
 var text_Title_Horarios = section_Horarios.appendChild(element_Text_Horarios_1);
 var text_Subtitle_1_Horarios = section_Horarios.appendChild(element_Text_Horarios_2);
-var text_Subtitle_2_Horarios = section_Horarios.appendChild(element_Text_Horarios_3);
 
-text_Title_Horarios.style.fontSize = "96px";
+text_Title_Horarios.style.fontSize = "90px";
 text_Title_Horarios.innerHTML = "Nuestros horarios son:"
 text_Title_Horarios.style.width = "max-content";
 text_Title_Horarios.style.marginLeft = "160px"
 
-text_Subtitle_1_Horarios.style.fontSize = "72px";
-text_Subtitle_1_Horarios.innerHTML = "-De 00:00 a 00:00 de Lunes a Sabado.";
+text_Subtitle_1_Horarios.style.fontSize = "70px";
+text_Subtitle_1_Horarios.innerHTML = "De 9:30 a 21:30 de Lunes a Lunes.";
 text_Subtitle_1_Horarios.style.width = "830px";
-text_Subtitle_1_Horarios.style.marginLeft = "160px"
-
-text_Subtitle_2_Horarios.style.fontSize = "72px";
-text_Subtitle_2_Horarios.innerHTML = "-De 00:00 a 00:00 los Domingos.";
-text_Subtitle_2_Horarios.style.width = "830px";
-text_Subtitle_2_Horarios.style.marginLeft = "160px"
+text_Subtitle_1_Horarios.style.marginLeft = "160px";
 
 //Div Parent 5
 
@@ -303,7 +276,7 @@ div_Parent_5.style.height = "120px";
 var footer = div_Parent_5.appendChild(element_Footer);
 
 footer.style.width = "100vw";
-footer.style.height = "120px";
+footer.style.height = "400px";
 footer.style.backgroundColor = "#080808";
 footer.style.display = "flex";
 footer.style.alignItems = "center";
@@ -319,8 +292,13 @@ footer_Text.style.margin = "0px 0px 0px 50px";
 
 
 //Footer Icons
-
+var footer_Logo_Image = footer.appendChild(element_Footer_Logo_Image);
 var footer_Phone_Icon = footer.appendChild(element_Footer_Phone_Icon);
+
+footer_Logo_Image.src = "img/Logo.png";
+footer_Logo_Image.alt ="Logo";
+footer_Logo_Image.style.position = "relative";
+footer_Logo_Image.style.left = 300;
 
 footer_Phone_Icon.src = "img/phoneIcon.png";
 footer_Phone_Icon.alt = "phone";
@@ -342,17 +320,25 @@ footer_Text.style.marginLeft = "50px";
 footer_Text.style.marginTop = "15px";
 
 //Footer images
+element_Footer.appendChild(element_Footer_Logo_Image);
 var footer_Facebook_Image = footer.appendChild(element_Footer_Facebook_Image);
-var footer_PhoneNumber_Image = footer.appendChild(element_Footer_PhoneNumber_Image);
 var footer_Email_Image = footer.appendChild(element_Footer_Email_Image);
 var footer_Instagram_Image = footer.appendChild(element_Footer_Instagram_Image);
 
-footer_Facebook_Image.src="img/facebookIcon.png";
-footer_PhoneNumber_Image.src="img/phoneIcon.png";
-footer_Email_Image.src="img/emailIcon.png";
+
+footer_Facebook_Image.src="img/facebookIcon.png";footer_Email_Image.src="img/emailIcon.png";
 footer_Instagram_Image.src="img/instagramIcon.png";
 
-//Images Location
+//Google Maps en el Footer
+var footer_Maps_Frame = footer.appendChild(element_Footer_Maps_Frame);
+footer_Maps_Frame.style.position="absolute";
+footer_Maps_Frame.style.width="400px";
+footer_Maps_Frame.style.height="400px";
+footer_Maps_Frame.style.flexShrink = "0";
+footer_Maps_Frame.style.margin = "0px 100px";
+footer_Maps_Frame.style.right = "5px";
+
+//Imagenes
 footer_Facebook_Image.style.marginLeft = "230px";
 footer_Facebook_Image.style.marginTop = "-3px";
 
@@ -383,7 +369,3 @@ element_Footer_Email_Image.onclick = function(){
 };
 
 var footer_PhoneNumber_Link = footer_PhoneNumber_Image.appendChild(element_Footer_PhoneNumber_Link);
-var user_Agent;
-if(/Android|iPhone|Windows Phone/.test(navigator.userAgent)){
-
-element_Footer_PhoneNumber_Image.onclick = function(){window.open('tel:+54 9 2996 54-4678')}}
