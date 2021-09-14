@@ -9,6 +9,7 @@ document.body.style.fontFamily = "Roboto, ";
 
 // Referencias a los elementos de HTML
 var header = document.getElementById("header");
+var logo = document.getElementById("logo_Image");
 
 var section_1 = document.getElementById("section_1");
 var section_2 = document.getElementById("section_2");
@@ -81,19 +82,37 @@ nav_Bar.style.height = "148px";
 //Cambios al Header y a la primera seccion de la pagina
 header.style.height = "137px";
 header.style.backgroundColor = "";
-header.style.position = "absolute";
+header.style.position = "-webkit-sticky";
+header.style.position ="sticky";
+header.style.top ="0px";
 header.style.width = "inherit";
+
+logo.style.left ="20px";
+logo.style.top ="30px";
+logo.style.margin =" 5px 5px";
 
 nav_Bar.style.height = "137px";
 nav_Bar.style.width = "inherit"
-nav_Bar.style.background = "linear-gradient(#080808, transparent)";
-nav_Bar.style.position = "relative";
+nav_Bar.style.position = "-webkit-sticky";
+nav_Bar.style.position ="sticky";
+nav_Bar.style.top ="0px";
+nav_Bar.style.background="linear-gradient(#080808, transparent)";
 nav_Bar.style.display = "flex";
 nav_Bar.style.justifyContent = "flex-end";
 
 article_1_Title_Text.style.fontFamily = "Merienda One";
 
-//Efecto Hover a los elementos de la barra de navegacion
+//Efecto Hover a los elementos del header
+logo.onmouseover = function mouse_Over_Logo(){
+    this.style.border="3px solid #080808";
+        this.style.top = "25px";
+        this.style.boxShadow = "0px 10px 10px black";
+}
+logo.onmouseout = function mouse_Leave_Logo(){
+    this.style.border="";
+    this.style.top = "30px";
+    this.style.boxShadow = "";
+}
 for(var x = 0; x < nav_Elements.length; x++){
 
     nav_Elements[x].addEventListener("mouseenter", function mouse_Enter(){
