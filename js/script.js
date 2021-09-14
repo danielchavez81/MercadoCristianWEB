@@ -20,6 +20,7 @@ var article_1_Element_Inicio = document.getElementById("Element_Inicio");
 var article_1_Element_Ubicacion = document.getElementById("Element_Ubicacion");
 var article_1_Element_Contacto = document.getElementById("Element_Contacto");
 var article_1_Texts = article_1.querySelectorAll("p");
+var element_Footer_Maps_Frame = document.getElementById("Maps_Frame");
 
 
 var nav_Bar = document.getElementById("nav_Bar"); 
@@ -51,7 +52,7 @@ var element_Text_Horarios_2 = document.createElement("p");
 
 var element_Footer = document.createElement('footer');
 var element_Footer_Text = document.createElement('p');
-var element_Footer_Phone_Icon = document.createElement('img');
+var element_Footer_Wpp_Icon = document.createElement('img');
 var element_Footer_Facebook_Image = document.createElement("img");
 var element_Footer_PhoneNumber_Image = document.createElement("img");
 var element_Footer_Instagram_Image = document.createElement("img");
@@ -63,7 +64,7 @@ var element_Footer_PhoneNumber_Link = document.createElement("a");
 var element_Footer_Email_Link = document.createElement("a");
 var element_Footer_PhoneNumber_Link = document.createElement("a");
 var element_Footer_Logo_Image = document.createElement("img");
-var element_Footer_Maps_Frame = document.getElementById("Maps_Frame");
+var element_Footer_Nav_Bar = document.createElement("nav");
 
 //Cambios al CSS
 article_1.style.backgroundColor = "transparent";
@@ -276,7 +277,7 @@ div_Parent_5.style.height = "120px";
 var footer = div_Parent_5.appendChild(element_Footer);
 
 footer.style.width = "100vw";
-footer.style.height = "400px";
+footer.style.height = "253px";
 footer.style.backgroundColor = "#080808";
 footer.style.display = "flex";
 footer.style.alignItems = "center";
@@ -285,36 +286,48 @@ footer.style.justifyContent = "flex-start";
 //Footer Text
 var footer_Text = footer.appendChild(element_Footer_Text);
 
-footer_Text.innerHTML = "Mercado Cristian";
-footer_Text.style.fontSize = "30px";
-footer_Text.style.color = "white";
+footer_Text.innerHTML = "Información de contacto:";
+footer_Text.style.fontSize = "10px";
+footer_Text.style.color = color1;
 footer_Text.style.margin = "0px 0px 0px 50px";
 
 
 //Footer Icons
 var footer_Logo_Image = footer.appendChild(element_Footer_Logo_Image);
-var footer_Phone_Icon = footer.appendChild(element_Footer_Phone_Icon);
 
 footer_Logo_Image.src = "img/Logo.png";
 footer_Logo_Image.alt ="Logo";
 footer_Logo_Image.style.position = "relative";
 footer_Logo_Image.style.left = 300;
 
-footer_Phone_Icon.src = "img/phoneIcon.png";
-footer_Phone_Icon.alt = "phone";
-footer_Phone_Icon.style.margin = "0px 30px";
-footer_Phone_Icon.style.zIndex = "0"
+//Boton Wpp
+var footer_Wpp_Icon = footer.appendChild(element_Footer_Wpp_Icon);
 
-footer_Phone_Icon.onmouseover = function mouse_Over(){
+footer_Wpp_Icon.src = "img/wppIcon.png";
+footer_Wpp_Icon.alt = "Whatsapp";
+footer_Wpp_Icon.style.margin = "0px 30px";
+footer_Wpp_Icon.style.zIndex = "0";
+footer_Wpp_Icon.style.borderEndEndRadius = "40%";
+footer_Wpp_Icon.style.borderTopLeftRadius = "40%";
+footer_Wpp_Icon.style.borderTopRightRadius ="40%";
+
+footer_Wpp_Icon.onmouseover = function mouse_Over(){
     this.style.border = "4px solid outer #DFC84F";
     this.style.boxShadow = "1px 10px 10px black"
     //footer_Phone_Icon_Pop_Up.style.display = "inline";
 }
-footer_Phone_Icon.onmouseout = function mouse_Leave(){
+footer_Wpp_Icon.onmouseout = function mouse_Leave(){
     this.style.border = "";
     this.style.boxShadow = "";
     //footer_Phone_Icon_Pop_Up.style.display = "none";
 }
+
+footer_Wpp_Icon.onclick = function(){
+    window.location.href = 'https://api.whatsapp.com/send?phone=5492996544678';
+};
+
+
+
 
 footer_Text.style.marginLeft = "50px";
 footer_Text.style.marginTop = "15px";
@@ -332,11 +345,26 @@ footer_Instagram_Image.src="img/instagramIcon.png";
 //Google Maps en el Footer
 var footer_Maps_Frame = footer.appendChild(element_Footer_Maps_Frame);
 footer_Maps_Frame.style.position="absolute";
-footer_Maps_Frame.style.width="400px";
-footer_Maps_Frame.style.height="400px";
+footer_Maps_Frame.style.width="250px";
+footer_Maps_Frame.style.height="250px";
 footer_Maps_Frame.style.flexShrink = "0";
-footer_Maps_Frame.style.margin = "0px 100px";
-footer_Maps_Frame.style.right = "5px";
+footer_Maps_Frame.style.margin = "0px 10px";
+footer_Maps_Frame.style.right = "2px";
+footer_Maps_Frame.style.borderRadius = "5%";
+
+//Barra de Navegación en el Footer
+
+var footer_Nav_Bar = footer.appendChild(element_Footer_Nav_Bar);
+footer_Nav_Bar.style.position = "absolute";
+footer_Nav_Bar.style.height = "250px";
+footer_Nav_Bar.style.width = "250px";
+footer_Nav_Bar.style.right = "272px";
+footer_Nav_Bar.style.padding = "20px 20px";
+footer_Nav_Bar.style.overflow ="hidden";
+footer_Nav_Bar.style.backgroundColor ="#435432";
+footer_Nav_Bar.style.zIndex ="0";
+footer_Nav_Bar.style.borderRadius = "5%";
+
 
 //Imagenes
 footer_Facebook_Image.style.marginLeft = "230px";
@@ -353,6 +381,8 @@ footer_Instagram_Image.style.marginLeft="120px";
 
 
 //botones del footer
+
+
 var footer_Facebook_Link = footer_Facebook_Image.appendChild(element_Footer_Facebook_Link);
 element_Footer_Facebook_Image.onclick = function(){
     window.location.href = 'https://www.facebook.com/cristian.caniulef.5';
@@ -368,4 +398,3 @@ element_Footer_Email_Image.onclick = function(){
     window.open('mailto:marcado.cristian.shippuden@gmail.com');
 };
 
-var footer_PhoneNumber_Link = footer_PhoneNumber_Image.appendChild(element_Footer_PhoneNumber_Link);
