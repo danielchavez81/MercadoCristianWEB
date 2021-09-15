@@ -86,10 +86,12 @@ header.style.position = "-webkit-sticky";
 header.style.position ="sticky";
 header.style.top ="0px";
 header.style.width = "inherit";
+header.className ="col-xs-12 col-sm-4 col-md-6";
 
 logo.style.left ="20px";
 logo.style.top ="30px";
 logo.style.margin =" 5px 5px";
+logo.className="col-xs-auto col-sm-2 col-md-auto";
 
 nav_Bar.style.height = "137px";
 nav_Bar.style.width = "inherit"
@@ -99,8 +101,7 @@ nav_Bar.style.top ="0px";
 nav_Bar.style.background="linear-gradient(#080808, transparent)";
 nav_Bar.style.display = "flex";
 nav_Bar.style.justifyContent = "flex-end";
-
-article_1_Title_Text.style.fontFamily = "Merienda One";
+nav_Bar.className="col-xs-12 col-sm-4 col-md-6";
 
 //Efecto Hover a los elementos del header
 logo.onmouseover = function mouse_Over_Logo(){
@@ -152,6 +153,7 @@ article_1_Title_Text.style.fontSize = "144px";
 article_1_Title_Text.style.lineHeight = "170px"
 article_1_Title_Text.style.color = color2;
 article_1_Title_Text.style.fontWeight = "normal";
+article_1_Title_Text.style.fontFamily = "Merienda One";
 
 section_2.style.display = "none";
 section_3.style.display = "none";
@@ -166,7 +168,7 @@ div_Parent_1.appendChild(section_1);
 div_Parent_1.style.height = "100vh";
 div_Parent_1.style.width = "inherit";
 div_Parent_1.style.position = "relative";
-
+div_Parent_1.className="col-xs-6 col-sm-6 col-md-12";
 //Creacion de la seccion "¿quienes somos?" de la pagina
 var section_Quienes_Somos = document.body.appendChild(element_Section_Quienes_Somos);
 
@@ -201,6 +203,7 @@ text_Quienes_Somos.innerHTML = "¿Quienes Somos?";
 text_Quienes_Somos.style.color = "white";
 text_Quienes_Somos.style.fontSize = "72px";
 text_Quienes_Somos.style.width = "min-content";
+text_Quienes_Somos.className="col-xs-6 col-sm-6 col-md-12";
 
 //Creacion del parrafo de la informacion del local
 
@@ -211,6 +214,7 @@ paragraph_Quienes_Somos.style.color = "white";
 paragraph_Quienes_Somos.style.fontSize = "36px";
 paragraph_Quienes_Somos.style.width = "880px";
 paragraph_Quienes_Somos.style.margin = "0px 40px";
+paragraph_Quienes_Somos.className="col-xs-3 col-sm-6 col-md-12";
 
 //Div parent 3
 var div_Parent_3 = document.body.appendChild(element_Div_Parent_Container_3);
@@ -250,6 +254,7 @@ text_Ubicacion.style.fontSize = "90px";
 text_Ubicacion.style.width = "462px";
 text_Ubicacion.style.height = "321px";
 text_Ubicacion.style.marginBottom = "90px";
+text_Ubicacion.className="col-xs-3 col-sm-6 col-md-12";
 
 //Div parent 4
 
@@ -279,11 +284,13 @@ text_Title_Horarios.style.fontSize = "90px";
 text_Title_Horarios.innerHTML = "Nuestros horarios son:"
 text_Title_Horarios.style.width = "max-content";
 text_Title_Horarios.style.marginLeft = "160px"
+text_Title_Horarios.className="col-xs-3 col-sm-6 col-md-12";
 
 text_Subtitle_1_Horarios.style.fontSize = "70px";
 text_Subtitle_1_Horarios.innerHTML = "De 9:30 a 21:30 de Lunes a Lunes.";
 text_Subtitle_1_Horarios.style.width = "830px";
 text_Subtitle_1_Horarios.style.marginLeft = "160px";
+text_Subtitle_1_Horarios.className="col-xs-3 col-sm-6 col-md-12";
 
 //Div Parent 5
 
@@ -301,6 +308,7 @@ footer.style.backgroundColor = "#080808";
 footer.style.display = "flex";
 footer.style.alignItems = "center";
 footer.style.justifyContent = "flex-start";
+footer.className="col-xs-3 col-sm-6 col-md-12";
 
 //Footer Text
 var footer_Text = footer.appendChild(element_Footer_Text);
@@ -309,15 +317,19 @@ footer_Text.innerHTML = "Información de contacto:";
 footer_Text.style.fontSize = "10px";
 footer_Text.style.color = color1;
 footer_Text.style.margin = "0px 0px 0px 50px";
+footer_Text.style.right="20px";
 
 
 //Footer Icons
 var footer_Logo_Image = footer.appendChild(element_Footer_Logo_Image);
 
-footer_Logo_Image.src = "img/Logo.png";
+footer_Logo_Image.src = "img/Logo1.png";
 footer_Logo_Image.alt ="Logo";
 footer_Logo_Image.style.position = "relative";
-footer_Logo_Image.style.left = 300;
+footer_Logo_Image.style.left = "-260px";
+footer_Logo_Image.style.top="-60px";
+footer_Logo_Image.style.width="180px";
+footer_Logo_Image.style.height="80px";
 
 //Boton Wpp
 var footer_Wpp_Icon = footer.appendChild(element_Footer_Wpp_Icon);
@@ -329,6 +341,7 @@ footer_Wpp_Icon.style.zIndex = "0";
 footer_Wpp_Icon.style.borderEndEndRadius = "40%";
 footer_Wpp_Icon.style.borderTopLeftRadius = "40%";
 footer_Wpp_Icon.style.borderTopRightRadius ="40%";
+footer_Wpp_Icon.style.left="60px";
 
 footer_Wpp_Icon.onmouseover = function mouse_Over(){
     this.style.border = "4px solid outer #DFC84F";
@@ -341,15 +354,7 @@ footer_Wpp_Icon.onmouseout = function mouse_Leave(){
     //footer_Phone_Icon_Pop_Up.style.display = "none";
 }
 
-footer_Wpp_Icon.onclick = function(){
-    window.location.href = 'https://api.whatsapp.com/send?phone=5492996544678';
-};
-
-
-
-
-footer_Text.style.marginLeft = "50px";
-footer_Text.style.marginTop = "15px";
+//Boton FB
 
 //Footer images
 element_Footer.appendChild(element_Footer_Logo_Image);
@@ -371,7 +376,7 @@ footer_Maps_Frame.style.margin = "0px 10px";
 footer_Maps_Frame.style.right = "2px";
 footer_Maps_Frame.style.borderRadius = "5%";
 
-//Barra de Navegación en el Footer
+//Barra de Navegación de imagenes en el Footer
 
 var footer_Nav_Bar = footer.appendChild(element_Footer_Nav_Bar);
 footer_Nav_Bar.style.position = "absolute";
@@ -380,28 +385,11 @@ footer_Nav_Bar.style.width = "250px";
 footer_Nav_Bar.style.right = "272px";
 footer_Nav_Bar.style.padding = "20px 20px";
 footer_Nav_Bar.style.overflow ="hidden";
-footer_Nav_Bar.style.backgroundColor ="#435432";
+footer_Nav_Bar.style.backgroundColor ="#";
 footer_Nav_Bar.style.zIndex ="0";
 footer_Nav_Bar.style.borderRadius = "5%";
 
-
-//Imagenes
-footer_Facebook_Image.style.marginLeft = "230px";
-footer_Facebook_Image.style.marginTop = "-3px";
-
-footer_PhoneNumber_Image.style.marginTop="-3px";
-footer_PhoneNumber_Image.style.marginLeft="-230px";
-
-footer_Email_Image.style.marginTop="-3px";
-footer_Email_Image.style.marginLeft="40px";
-
-footer_Instagram_Image.style.marginTop="-3px";
-footer_Instagram_Image.style.marginLeft="120px";
-
-
-//botones del footer
-
-
+//links botones del footer
 var footer_Facebook_Link = footer_Facebook_Image.appendChild(element_Footer_Facebook_Link);
 element_Footer_Facebook_Image.onclick = function(){
     window.location.href = 'https://www.facebook.com/cristian.caniulef.5';
@@ -415,5 +403,8 @@ element_Footer_Instagram_Image.onclick = function(){
 var footer_Email_Link = footer_Email_Image.appendChild(element_Footer_Email_Link);
 element_Footer_Email_Image.onclick = function(){
     window.open('mailto:marcado.cristian.shippuden@gmail.com');
+};
+footer_Wpp_Icon.onclick = function(){
+    window.location.href = 'https://api.whatsapp.com/send?phone=5492996544678';
 };
 
