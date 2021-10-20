@@ -37,6 +37,7 @@ var element_Div_Parent_Container_3 = document.createElement('div');
 var element_Div_Parent_Container_4 = document.createElement('div');
 var element_Div_Parent_Container_5 = document.createElement('div');
 
+
 var element_Section_Quienes_Somos = document.createElement('section');
 var element_Article_Quienes_Somos = document.createElement('article');
 var element_Text_Quienes_Somos = document.createElement('p');
@@ -103,17 +104,6 @@ nav_Bar.style.display = "flex";
 nav_Bar.style.justifyContent = "flex-end";
 nav_Bar.className="col-xs-12 col-sm-4 col-md-6";
 
-//Efecto Hover a los elementos del header
-logo.onmouseover = function mouse_Over_Logo(){
-    this.style.border="3px solid #080808";
-        this.style.top = "25px";
-        this.style.boxShadow = "0px 10px 10px black";
-}
-logo.onmouseout = function mouse_Leave_Logo(){
-    this.style.border="";
-    this.style.top = "30px";
-    this.style.boxShadow = "";
-}
 for(var x = 0; x < nav_Elements.length; x++){
 
     nav_Elements[x].addEventListener("mouseenter", function mouse_Enter(){
@@ -407,4 +397,56 @@ element_Footer_Email_Image.onclick = function(){
 footer_Wpp_Icon.onclick = function(){
     window.location.href = 'https://api.whatsapp.com/send?phone=5492996544678';
 };
+
+//CAMBIOS EN EL MAPEO DE LA PAGINA, REORGANIZACION DE LAS ETIQUETAS
+
+//creamos todos los divs
+
+const d1 = document.createElement('div');
+const d2 = document.createElement('div');
+const d3 = document.createElement('div');
+const d4 = document.createElement('div');
+const d5 = document.createElement('div');
+const d6 = document.createElement('div');
+
+//Insertamos los divs al body
+
+const div_1_header = document.body.appendChild(d1);
+const div_2_body = document.body.appendChild(d2);
+const div_3_article1 = document.body.appendChild(d3);
+const div_4_article2 = document.body.appendChild(d4);
+const div_5_images = document.body.appendChild(d5);
+const div_6_footer = document.body.appendChild(d6);
+
+//Insertamos los elementos ya existentes de la pagina a los divs
+
+var ref_header = div_1_header.appendChild(header);
+var ref_section1 = div_2_body.appendChild(section_1);
+
+//Ocultamos los divs antiguos
+div_Parent_1.style.display = "none";
+div_Parent_2.style.display = "none";
+div_Parent_3.style.display = "none";
+div_Parent_4.style.display = "none";
+div_Parent_5.style.display = "none";
+
+//les damos caracteristicas a los divs
+
+const all_divs = document.querySelectorAll('div');
+
+for (let i = 0; i < all_divs.length; i++) {
+    all_divs[i].style.width = "inherit";
+    all_divs[i].style.position = "relative";
+}
+
+//div 1
+div_1_header.style.position = "absolute";
+
+//div 2
+
+//div 3 y 4
+
+//div 5
+
+//div 6
 
