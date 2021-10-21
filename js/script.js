@@ -400,23 +400,13 @@ footer_Wpp_Icon.onclick = function(){
 
 //CAMBIOS EN EL MAPEO DE LA PAGINA, REORGANIZACION DE LAS ETIQUETAS
 
-//creamos todos los divs
+//Creamos e insertamos los divs al body
 
-const d1 = document.createElement('div');
-const d2 = document.createElement('div');
-const d3 = document.createElement('div');
-const d4 = document.createElement('div');
-const d5 = document.createElement('div');
-const d6 = document.createElement('div');
-
-//Insertamos los divs al body
-
-const div_1_header = document.body.appendChild(d1);
-const div_2_body = document.body.appendChild(d2);
-const div_3_article1 = document.body.appendChild(d3);
-const div_4_article2 = document.body.appendChild(d4);
-const div_5_images = document.body.appendChild(d5);
-const div_6_footer = document.body.appendChild(d6);
+const div_1_header = document.body.appendChild(document.createElement('div'));
+const div_2_body = document.body.appendChild(document.createElement('div'));
+const div_3 = document.body.appendChild(document.createElement('div'));
+const div_4_images = document.body.appendChild(document.createElement('div'));
+const div_5_footer = document.body.appendChild(document.createElement('div'));
 
 //Insertamos los elementos ya existentes de la pagina a los divs
 
@@ -443,10 +433,52 @@ for (let i = 0; i < all_divs.length; i++) {
 div_1_header.style.position = "absolute";
 
 //div 2
+div_2_body.style.height = "100vh";
 
-//div 3 y 4
+//div 3 
+div_3.style.height = "100vh"; 
+div_3.style.display = "flex";
+
+const sub1_div3 = div_3.appendChild(document.createElement('div'));
+const sub2_div3 = div_3.appendChild(document.createElement('div')); //Creo e inserto dos divs dentro de el div3
+
+const subdivs_d3 = div_3.querySelectorAll('div');//Lista de nodos que contiene los dos subdivs del d3
+
+for (let i = 0; i < subdivs_d3.length; i++) { //Creo un for que recorre los dos elementos para aplicarles estilo
+    subdivs_d3[i].style.width = "50%";
+    subdivs_d3[i].style.height = "inherit";
+    subdivs_d3[i].style.backgroundColor = color2;
+    subdivs_d3[i].style.display = "grid";
+    subdivs_d3[i].style.placeContent = "center";
+    subdivs_d3[i].style.color = color1;
+    subdivs_d3[i].style.zIndex = "1"
+    subdivs_d3[i].appendChild(document.createElement('div')); //Inserto un div en cada sub div
+    subdivs_d3[i].appendChild(document.createElement('p')); //Inserto una etiqueta p en cada div
+}
+
+var text_d3 = div_3.querySelectorAll('p');
+text_d3.item(0).innerHTML = "Est adipisicing aliquip dolor esse do reprehenderit nulla ad adipisicing sint aliquip ullamco exercitation. Excepteur consequat deserunt excepteur consequat magna voluptate minim aliqua occaecat nulla laborum. Nostrud cupidatat ut occaecat reprehenderit dolor amet do aliquip mollit. Nulla non dolore ad ullamco.";
+text_d3.item(0).style.fontSize = "55px";
+
+text_d3.item(1).innerHTML = "Veniam sint minim in do sint labore velit nostrud eiusmod proident nisi mollit eiusmod nulla"
+text_d3.item(1).style.fontSize = "55px";
+
+const panel1_d3 = subdivs_d3.item(0).querySelector('div');
+const panel2_d3 = subdivs_d3.item(1).querySelector('div');
+
+const panels_d3 = [panel1_d3, panel2_d3];
+    
+for (let i = 0; i < panels_d3.length; i++) {
+    panels_d3[i].style.width = "inherit";
+    panels_d3[i].style.height = "100vh";
+    panels_d3[i].style.position = "absolute";
+    panels_d3[i].style.zIndex = "10";
+    panels_d3[i].style.backgroundColor = color2;
+}
+
+
+
+//div 4
 
 //div 5
-
-//div 6
 
