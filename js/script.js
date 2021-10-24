@@ -452,7 +452,7 @@ for (let i = 0; i < subdivs_d3.length; i++) { //Creo un for que recorre los dos 
     subdivs_d3[i].style.placeContent = "center";
     subdivs_d3[i].style.color = color1;
     subdivs_d3[i].style.zIndex = "1"
-    subdivs_d3[i].appendChild(document.createElement('div')); //Inserto un div en cada sub div
+    subdivs_d3[i].style.position = "relative";
     subdivs_d3[i].appendChild(document.createElement('p')); //Inserto una etiqueta p en cada div
 }
 
@@ -463,18 +463,8 @@ text_d3.item(0).style.fontSize = "55px";
 text_d3.item(1).innerHTML = "Veniam sint minim in do sint labore velit nostrud eiusmod proident nisi mollit eiusmod nulla"
 text_d3.item(1).style.fontSize = "55px";
 
-const panel1_d3 = subdivs_d3.item(0).querySelector('div');
-const panel2_d3 = subdivs_d3.item(1).querySelector('div');
 
-const panels_d3 = [panel1_d3, panel2_d3];
-    
-for (let i = 0; i < panels_d3.length; i++) {
-    panels_d3[i].style.width = "inherit";
-    panels_d3[i].style.height = "100vh";
-    panels_d3[i].style.position = "absolute";
-    panels_d3[i].style.zIndex = "10";
-    panels_d3[i].style.backgroundColor = color2;
-}
+
 
 
 
