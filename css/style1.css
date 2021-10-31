@@ -10,13 +10,12 @@
     --color2: #484848;
 }
 
-/*
 #header{
     z-index: 1;
 }
+/*Barra de navegacion*/
 
-
-Contenedor de los elementos
+/*Contenedor de los elementos*/
 #nav_Elements{
     width: 100%;
     height: 134px;
@@ -48,7 +47,7 @@ Contenedor de los elementos
     outline-style: solid ;
     outline-width: 3px;
     outline-color: var(--color1);
-}
+}*/
 
 #nav_Elements li a {
     color: var(--color1)
@@ -61,6 +60,10 @@ Contenedor de los elementos
     
 }
 
+/*---------------------------------------*/
+
+/*Seccion 1*/
+
 #section_1{
     background-image: url(../img/bg1.png);
     width: 99.1vw;
@@ -70,7 +73,7 @@ Contenedor de los elementos
     overflow-x: auto;
 }
 
-
+/*Banner que muestra la informacion del local*/
 #section_1--Article_1{
     display: flex;
     background-color: var(--color1);
@@ -99,6 +102,7 @@ Contenedor de los elementos
     line-height:normal;
 }
 
+/*Seccion 2*/
 
 #section_2{
     background-image: url(../img/bg2.png);
@@ -117,7 +121,7 @@ Contenedor de los elementos
     width: 720px;
     height: 720px;
     border-radius: 0px 0px 90px 0px;
-}
+}*/
 
 
 #section_2--Article_1{
@@ -145,7 +149,7 @@ Contenedor de los elementos
     font-family: 'Merienda One';
 }
 
-
+/*Seccion 3*/
 
 #section_3{
     background-image: url(../img/bg3.png);
@@ -155,12 +159,9 @@ Contenedor de los elementos
     flex-direction: row;
     overflow-x: auto;
 }
-*/
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-.span-col-2{grid-column: span 2 / auto;}
-
-.span-row-4{grid-row: span 4 / auto;}
