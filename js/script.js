@@ -14,6 +14,7 @@ function addDiv(IDpadre, id){
     return element;
 }
 
+/*-------------------------------------------CREACION DE ELEMENTOS Y FUNCIONALIDAD-----------------------------------------------*/ 
 //Creo los divs padres
 const div1 = addDiv("body", "div1");
 const div2 = addDiv("body", "div2");
@@ -52,7 +53,19 @@ function f(){
         div1.classList.remove("sticky");
     }
 }
+//añado un div a modo de fondo
+const background_div2 = addDiv("div2", "bg_div2");
 
+//Añado un div con forma de circulo en el cuerpo de la pagina
+const button = addDiv("div2", "button");
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------*/ 
+/*----------------------------------------------ANIMACIONES DE LOS ELEMENTOS CREADOS--------------------------------------------*/ 
 //Animacion doble click sobre el logo
 var logo_anim = anime({
     targets: '#logo',
@@ -66,16 +79,23 @@ var logo_anim = anime({
     autoplay: false,
     easing: 'easeInOutSine'
 })
-
 logo.ondblclick = logo_anim.play;
+//Animo el circulo del div2
+var button_hover_anim = anime({
+    targets: '#button',
+    keyframes: [
+        {scale: '1.15'},
+        {scale: '1'},
+        {delay: '20'}
+    ],
+    autoplay: false,
+    loop: true,
+    easing: 'easeInOutSine'
+})
+
+button.onmouseenter = button_hover_anim.play;
+button.onmouseleave = button_hover_anim.reset;
+
+
 
 //Texto animado al cargar la pagina
-let test = addDiv("div2", "test");
-test.style = "width: 400px; height: 200px;"
-
-var options = {
-    strings: ['<i class="title_text">Mercado Cristian</i>', '<i class="title_text">Tu mercado de confianza</i>'],
-    typeSpeed: 4,
-    smartBackspace: true    
-};
-const titulo = new Typed('#test', options);
