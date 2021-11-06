@@ -1,10 +1,9 @@
-
 //Variables de color
-const color1 = "#DFC84F"
-const color2 = "#080808"
+const color1 = "#DFC84F";
+const color2 = "#080808";
 
 document.body.id = "body";
-document.body.style = "display: grid;"
+document.body.style = "display: grid"
 
 function addDiv(IDpadre, id){
     let parent = document.getElementById(IDpadre);
@@ -23,20 +22,22 @@ const div5 = addDiv("body", "div5");
 const divs = [div1, div2, div3,div4,div5]
 
 divs.forEach(function(item){
-    item.style = "width: 100%; height: 1200px;"
+    item.className = "parent_containers";
 })
 
 //NAVBAR
-div1.style = "width: 100%; overflow: hidden; background-color: #080808; height: 130px;  overflow: hidden; display: flex;"
-const navbar_element1 = div1.appendChild(document.createElement('a'));navbar_element1.innerHTML = "Inicio";
-const navbar_element2 = div1.appendChild(document.createElement('a'));navbar_element2.innerHTML = "Nosotros"
-const navbar_element3 = div1.appendChild(document.createElement('a'));navbar_element3.innerHTML = "Ubicacion"
-const navbar_element4 = div1.appendChild(document.createElement('a'));
-const navbar_elements = [navbar_element1, navbar_element2, navbar_element3, navbar_element4];
+const navbar_element1 = div1.appendChild(document.createElement('a'));navbar_element1.innerHTML = "Inicio"; navbar_element1.href = "#";navbar_element1.style.order = "2"
+const navbar_element2 = div1.appendChild(document.createElement('a'));navbar_element2.innerHTML = "Nosotros"; navbar_element2.href = "#";navbar_element2.style.order = "3"
+const navbar_element3 = div1.appendChild(document.createElement('a'));navbar_element3.innerHTML = "Ubicacion"; navbar_element3.href = "#"; navbar_element3.style.order = "4"
+const navbar_elements = [navbar_element1, navbar_element2, navbar_element3];
+navbar_elements.forEach(function (item) {
+    item.className = "navbar_elements"    
+})
+const logo =  div1.appendChild(document.createElement('img'))
+logo.src = "img/logo1.png";
+logo.id = "logo";
 
-
-div2.style = "height: calc(100vh - 130px); position: relative;"
-
+//INICIO
 
 
 window.onscroll = function(){f()}
@@ -49,4 +50,18 @@ function f(){
     }
 }
 
+var logo_anim = anime({
+    targets: '#logo',
+    keyframes:[
+        {rotate: '8deg'},
+        {rotate: '-8deg'},
+        {rotate: '0deg'},
+    ],
+    direction: 'alternate',
+    loop: 0,
+    autoplay: false,
+    easing: 'easeInOutSine'
+})
+
+logo.ondblclick = logo_anim.play;
 
