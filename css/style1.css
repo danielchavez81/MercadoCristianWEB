@@ -24,8 +24,9 @@
 }
 
 #div2{
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(238, 204, 51);
 }
 .navbar_elements{
@@ -64,4 +65,10 @@
     border-radius: 50%;
     border: 3px solid white;
     color: white;
+}
+
+#title_text{
+    font-size: 100px;
+    font-family: monospace;
+    font-weight: bolder;
 }

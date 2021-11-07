@@ -3,7 +3,7 @@ const color1 = "#DFC84F";
 const color2 = "#080808";
 //Ajustes al body
 document.body.id = "body";
-document.body.style = "display: grid"
+document.body.style = "display: grid; background-color:rgb(238, 204, 51);"
 
 //Funcion para crear divs, parametros: id del padre, id propia del div
 function addDiv(IDpadre, id){
@@ -53,8 +53,8 @@ function f(){
         div1.classList.remove("sticky");
     }
 }
-//añado un div a modo de fondo
-const background_div2 = addDiv("div2", "bg_div2");
+//añado un div para el texto
+const background_div2 = addDiv("div2", "text");
 
 //Añado un div con forma de circulo en el cuerpo de la pagina
 const button = addDiv("div2", "button");
@@ -80,21 +80,30 @@ var logo_anim = anime({
     easing: 'easeInOutSine'
 })
 logo.ondblclick = logo_anim.play;
-//Animo el circulo del div2
-var button_hover_anim = anime({
+
+//Creo la animacion click del boton
+var button_click_anim = anime({
     targets: '#button',
     keyframes: [
-        {scale: '1.15'},
-        {scale: '1'},
-        {delay: '20'}
+        {translateX: '-450'},
+        {delay: 200},
+        {opacity: ['100%', '0%']}
     ],
+    easing: 'easeInOutSine',
     autoplay: false,
-    loop: true,
-    easing: 'easeInOutSine'
+    loop: 1,
+    duration: 1000,
+    complete: function(anim){
+
+        var text_anim = new Typed('#text', {
+            strings: ['<i id="title_text">Mercado Cristian</i>'],
+            typeSpeed: 100,
+            showCursor: false
+        })
+    }
 })
 
-button.onmouseenter = button_hover_anim.play;
-button.onmouseleave = button_hover_anim.reset;
+button.onclick = button_click_anim.play;
 
 
 
