@@ -69,8 +69,13 @@ var about_div = addDiv("div3", "about_div");
 var p1 = about_div.appendChild(document.createElement('p')); p1.innerHTML = "Lörem ipsum proling nibås sedan paras danseoke. Reryling prosöska. Nålar anastik lykiligen ifall.";
 var p2 = about_div.appendChild(document.createElement('p')); p2.innerHTML = "Preskapet fåde vysk: som hasuse en infrade. Kavis prosa viren fastän gigalyr pede. Jer dingen. Maskapet kabel decin i vas att vas.";
 
+//Añado la ilustracion SVG al div4
+var illus_svg = div4.appendChild(document.getElementById("illustration_svg"))
+
 //Añado un div al div4 para mostrar la imagen
 var subdiv = addDiv("div4", "subdiv4");
+
+
 
 
 

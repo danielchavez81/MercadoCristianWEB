@@ -171,5 +171,14 @@ body{
     height: 927px;
     left: 808px;
     top: 0px;
-    background:  url("../img/Vector\ 5.png");
+    background:  url("../img/Vector\ 5(1).png");
+}
+
+#illustration_svg{
+    position: absolute;
+    width: 651.25px;
+    height: 531.89px;
+    left: 1228px;
+    top: 160px;
+    z-index: 12;
 }
