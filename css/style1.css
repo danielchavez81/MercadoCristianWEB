@@ -9,7 +9,7 @@ body{
     --color1: #080808;
     --color2: #F2CC2E;
     --color3: #F5D95A;
-    --color4: #DCDCDC;
+    --color4: #FFEB8F;
     --color5: #FFFFFF;
 }
 .sticky{
@@ -28,13 +28,14 @@ body{
     width: 100%;
     overflow: hidden;
     background: transparent;
-    height: 130px;
+    height: 110px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     z-index: 12;
+    padding: 0px 110px 0px 0px;
 }
 
 #div2{
@@ -58,7 +59,6 @@ body{
     position: relative;
     top: 930px;
     background: var(--color2);
-    border: 2px dashed black;
 }
 
 #div5{
@@ -66,25 +66,28 @@ body{
     top: 930px;
 }
 .navbar_elements{
-    color: var(--color5);
-    margin: 15px 1px;
+    color: var(--color1);
+    margin: 0px 10px;
     height: 50px;
     width: 140px;
     text-decoration: none;
     font-size: 20px;
     font-weight:bold;
-    text-justify:distribute;
-    text-align: center;
-    padding: 8px;
     transition: all 0.3s ease-out, color 0.3s;
+    z-index: 24;
+    background-color: var(--color4);
+    border-top: 3px solid var(--color1);
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.navbar_elements i{
+    font-style: normal;
+}
 .navbar_elements:hover{
+    color: var(--color5);
     background-color: var(--color1);
-    color: #000000;
-    transform: translateX(-5px) translateY(-5px) rotate3d(1, 2.0, 3.0, 1deg) ;
-    border-radius: 4px;
-    color: var(--color2);
 }
 
 #logo{
@@ -132,7 +135,7 @@ body{
     width: 1320px;
     height: 600px;
     background-color: var(--color3);
-    z-index: 12;
+    z-index: 2;
     position: relative;
     border: 5px solid var(--color1);
     border-right: none;
@@ -180,5 +183,54 @@ body{
     height: 531.89px;
     left: 1228px;
     top: 160px;
-    z-index: 12;
+    z-index: 2;
+}
+
+.slides {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 600px;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 200px;
+    top: 200px;
+  }
+  .slide1 {
+    background-image: url("../img/bg1.png"); }
+  .slide2 {
+    background-image: url("../img/bg2.png");}
+  .slide3 {
+    background-image: url("../img/bg3.png");}
+  .arrow {
+    cursor: pointer;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    top: 490px;
+    left: 0px;
+    z-index: 3;
+  }
+  #arrow-left {
+    border-width: 20px 30px 20px 0;
+    border-color: transparent var(--color2) transparent transparent;
+    left: 210px;
+  }
+  #arrow-right {
+    border-width: 20px 0 20px 30px;
+    border-color: transparent transparent transparent var(--color2);
+    left: 955px;
+  }
+.gallery_container{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 600px;
+    left: 100px;
+    top: 200px;
 }
