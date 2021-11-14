@@ -57,6 +57,8 @@ body{
 #div4{
     position: relative;
     top: 930px;
+    background: var(--color2);
+    border: 2px dashed black;
 }
 
 #div5{
