@@ -11,7 +11,7 @@ function addDiv(IDpadre, id){
     return element;
 }
 
-/*-------------------------------------------CREACION DE ELEMENTOS Y FUNCIONALIDAD-----------------------------------------------*/ 
+//#region Creacion de parent divs
 //Creo los divs padres
 const div1 = addDiv("body", "div1");
 const div2 = addDiv("body", "div2");
@@ -26,8 +26,9 @@ const divs = [div1, div2, div3,div4,div5]
 divs.forEach(function(item){
     item.className = "parent_containers";
 })
+//#endregion
 
-//Barra de navegacion
+//#region  Barra de navegacion
 const navbar_element1 = div1.appendChild(document.createElement('a'));navbar_element1.innerHTML = "<i>Inicio</i>"; navbar_element1.href = "#div2";navbar_element1.style.order = "2"
 const navbar_element2 = div1.appendChild(document.createElement('a'));navbar_element2.innerHTML = "<i>Nosotros</i>"; navbar_element2.href = "#div3";navbar_element2.style.order = "3"
 const navbar_element3 = div1.appendChild(document.createElement('a'));navbar_element3.innerHTML = "<i>Imagenes</i>"; navbar_element3.href = "#div4"; navbar_element3.style.order = "4"
@@ -50,42 +51,58 @@ function f(){
         div1.classList.remove("sticky");
     }
 }
+//#endregion
 
-//Añado el vector adentro de el div 2
-var svg_wave = document.getElementById("wave_svg");
-div2.appendChild(svg_wave);
+//#region Elementos hijos de los divs
 
-//Añado el titulo al div 2
-var title_text = div2.appendChild(document.createElement('p'));
-title_text.id = "title_text";
-title_text.innerHTML = "Tu mercado de <span>confianza</span>.";
+    //#region Div2
+    //Añado el vector adentro de el div 2
+    var svg_wave = document.getElementById("wave_svg");
+    div2.appendChild(svg_wave);
 
-//Añado un div al div 3 para colocar el cartel con la info de nosotros
-var about_div = addDiv("div3", "about_div");
-var p1 = about_div.appendChild(document.createElement('p')); p1.innerHTML = "Lörem ipsum proling nibås sedan paras danseoke. Reryling prosöska. Nålar anastik lykiligen ifall.";
-var p2 = about_div.appendChild(document.createElement('p')); p2.innerHTML = "Preskapet fåde vysk: som hasuse en infrade. Kavis prosa viren fastän gigalyr pede. Jer dingen. Maskapet kabel decin i vas att vas.";
+    //Añado el titulo al div 2
+    var title_text = div2.appendChild(document.createElement('p'));
+    title_text.id = "title_text";
+    title_text.innerHTML = "Tu mercado de <span>confianza</span>.";
+    //#endregion
+    
+    //#region Div3
+    //Añado un div al div 3 para colocar el cartel con la info de nosotros
+    var about_div = addDiv("div3", "about_div");
+    var p1 = about_div.appendChild(document.createElement('p')); p1.innerHTML = "Lörem ipsum proling nibås sedan paras danseoke. Reryling prosöska. Nålar anastik lykiligen ifall.";
+    var p2 = about_div.appendChild(document.createElement('p')); p2.innerHTML = "Preskapet fåde vysk: som hasuse en infrade. Kavis prosa viren fastän gigalyr pede. Jer dingen. Maskapet kabel decin i vas att vas.";
+    //#endregion
+    
+    //#region Div4
+    //Añado la ilustracion SVG al div4
+    var illus_svg = div4.appendChild(document.getElementById("illustration_svg"))
 
-//Añado la ilustracion SVG al div4
-var illus_svg = div4.appendChild(document.getElementById("illustration_svg"))
+    //Añado un div al div4 para mostrar la imagen
+    var subdiv = addDiv("div4", "subdiv4");
+    //Añado un texto arriba de la galeria
+    var gallery_text = div4.appendChild(document.createElement('p'));
+    gallery_text.classList.add("gallery_text");
+    gallery_text.textContent = "Galeria de fotos";
+    //#endregion
+    
+    //#region Div5
+    //Creo el footer dentro del div 5
+    var footer = div5.appendChild(document.createElement('footer'));
+    footer.id = "footer"
 
-//Añado un div al div4 para mostrar la imagen
-var subdiv = addDiv("div4", "subdiv4");
+    //Creo 3 divs dentro del div 5 para los caracteristicas
+    var calidad_icon = addDiv("div5", "calidad_icon");
+    var confianza_icon = addDiv("div5", "confianza_icon");
+    var precios_icon = addDiv("div5", "precios_icon");
+    var icons = [precios_icon, confianza_icon, calidad_icon]
+    icons.forEach((item)=>{
+        item.className = "icons";
+    })
+    //#endregion
 
-//Creo el footer dentro del div 5
-var footer = div5.appendChild(document.createElement('footer'));
-footer.id = "footer"
+//#endregion
 
-//Creo 3 divs dentro del div 5 para los caracteristicas
-var calidad_icon = addDiv("div5", "calidad_icon");
-var confianza_icon = addDiv("div5", "confianza_icon");
-var precios_icon = addDiv("div5", "precios_icon");
-var icons = [precios_icon, confianza_icon, calidad_icon]
-icons.forEach((item)=>{
-    item.className = "icons";
-})
-
-
-//Animacion doble click sobre el logo
+//#region Animaciones
 var logo_anim = anime({
     targets: '#logo',
     keyframes:[
@@ -99,6 +116,7 @@ var logo_anim = anime({
     easing: 'easeInOutSine'
 })
 logo.ondblclick = logo_anim.play;
+//#endregion
 
 //#region Galeria
 document.querySelectorAll(".g").forEach((el)=>{

@@ -304,3 +304,14 @@ body{
     top: 100%;
     left: 0px;
 }
+
+.gallery_text{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 80px;
+    left: 550px;
+    font-size: 24px;
+    color: var(--color1);
+    font-weight: bolder;
+}
