@@ -10,8 +10,8 @@
 }
 .sticky{
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 0px;
+    width: 100vw;
 }
 
 .parent_containers{
@@ -30,14 +30,24 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    z-index: 3;
+    z-index: 12;
 }
 
 #div2{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: var(--color2);
+    height: 100vh;
+    position: absolute;
+}
+#div3{
+    position: relative;
+    top: 930px;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .navbar_elements{
     color: var(--color5);
@@ -79,8 +89,38 @@
 }
 
 #title_text{
-    font-size: 100px;
-    font-family: monospace;
-    font-weight: bolder;
+    z-index: 3;
+    margin: 210px;
+    font-size: 66px;
+    width: 411px;
+    color: var(--color1);
+    font-weight:bolder;
+    position: relative;
 }
-
+#title_text span {
+    color: #FFFFFF;
+}
+#title_text::before{
+    content: "";
+    background-color: var(--color1);
+    position: absolute;
+    width: 400px;
+    height: 3px;
+    top: 100%;
+    left: -200px;
+    transform: translate(50%, 50%);
+}
+#title_text::after{
+    content: "Desde 2010 con vos.";
+    color: var(--color1);
+    opacity: 55%;
+    font-size: 30px;
+    position: absolute;
+    top: 200px;
+    left: 0px;
+}
+#wave_svg{
+    position: absolute;
+    top:199px;
+    left: 0px;
+}

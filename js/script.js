@@ -1,6 +1,7 @@
 //Variables de color
 const color1 = "#DFC84F";
 const color2 = "#080808";
+
 //Ajustes al body
 document.body.id = "body";
 document.body.style = "display: grid; background-color:rgb(238, 204, 51);"
@@ -44,8 +45,8 @@ logo.src = "img/logo1.png";
 logo.id = "logo";
 
 //Funcion que hace a la barra de navegacion Sticky
-window.onscroll = function(){f()}
 var sticky = div1.offsetTop;
+window.onscroll = function(){f()}
 function f(){
     if (window.scrollY >= sticky) {
         div1.classList.add("sticky");
@@ -53,11 +54,15 @@ function f(){
         div1.classList.remove("sticky");
     }
 }
-//añado un div para el texto
-const background_div2 = addDiv("div2", "text");
 
-//Añado un div con forma de circulo en el cuerpo de la pagina
-const button = addDiv("div2", "button");
+//Añado el vector adentro de el div 2
+var svg_wave = document.getElementById("wave_svg");
+div2.appendChild(svg_wave);
+
+//Añado el titulo al div 2
+var title_text = div2.appendChild(document.createElement('p'));
+title_text.id = "title_text";
+title_text.innerHTML = "Tu mercado de <span>confianza</span>.";
 
 
 
@@ -81,29 +86,8 @@ var logo_anim = anime({
 })
 logo.ondblclick = logo_anim.play;
 
-//Creo la animacion click del boton
-var button_click_anim = anime({
-    targets: '#button',
-    keyframes: [
-        {translateX: '-450'},
-        {delay: 200},
-        {opacity: ['100%', '0%']}
-    ],
-    easing: 'easeInOutSine',
-    autoplay: false,
-    loop: 1,
-    duration: 1000,
-    complete: function(anim){
 
-        var text_anim = new Typed('#text', {
-            strings: ['<i id="title_text">Mercado Cristian</i>'],
-            typeSpeed: 100,
-            showCursor: false
-        })
-    }
-})
 
-button.onclick = button_click_anim.play;
 
 
 
