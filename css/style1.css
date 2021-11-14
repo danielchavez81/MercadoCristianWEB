@@ -64,6 +64,10 @@ body{
 #div5{
     position: relative;
     top: 930px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .navbar_elements{
     color: var(--color1);
@@ -170,18 +174,19 @@ body{
 
 #subdiv4{
     position: absolute;
-    width: 1112px;
-    height: 927px;
-    left: 808px;
-    top: 0px;
-    background:  url("../img/Vector\ 5(1).png");
+    width: 680px;
+    height: 600px;
+    left: 1150px;
+    top: 120px;
+    background-color: var(--color3);
+    border: 4px dashed var(--color1);
 }
 
 #illustration_svg{
     position: absolute;
     width: 651.25px;
     height: 531.89px;
-    left: 1228px;
+    left: 1170px;
     top: 160px;
     z-index: 2;
 }
@@ -197,7 +202,7 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     left: 200px;
-    top: 200px;
+    top: 117px;
   }
   .slide1 {
     background-image: url("../img/bg1.png"); }
@@ -211,7 +216,7 @@ body{
     width: 0;
     height: 0;
     border-style: solid;
-    top: 490px;
+    top: 400px;
     left: 0px;
     z-index: 3;
   }
@@ -225,12 +230,3 @@ body{
     border-color: transparent transparent transparent var(--color2);
     left: 955px;
   }
-.gallery_container{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 800px;
-    height: 600px;
-    left: 100px;
-    top: 200px;
-}

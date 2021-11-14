@@ -75,6 +75,20 @@ var illus_svg = div4.appendChild(document.getElementById("illustration_svg"))
 //Añado un div al div4 para mostrar la imagen
 var subdiv = addDiv("div4", "subdiv4");
 
+//Creo el footer dentro del div 5
+var footer = div5.appendChild(document.createElement('footer'));
+footer.id = "footer"
+
+//Creo 3 divs dentro del div 5 para los caracteristicas
+var calidad_icon = div5.appendChild(document.createElement('img'));
+calidad_icon.id = "calidad_icon"; 
+calidad_icon.src = "img/calidad_icon.png"
+var confianza_icon = div5.appendChild(document.createElement('img'));
+confianza_icon.id = "confianza_icon";
+confianza_icon.src = "img/confianza_icon.png";
+var precios_icon = div5.appendChild(document.createElement('img'));
+precios_icon.id = "precios_icon";
+precios_icon.src = "img/precios_icon.png";
 
 
 /*------------------------------------------------------------------------------------------*/ 
@@ -93,9 +107,8 @@ var logo_anim = anime({
     easing: 'easeInOutSine'
 })
 logo.ondblclick = logo_anim.play;
-
 document.querySelectorAll(".g").forEach((el)=>{
-    div4.appendChild(el);
+   div4.appendChild(el);
 })
 
 let sliderImages = document.querySelectorAll(".slides"),
