@@ -1,7 +1,3 @@
-//Variables de color
-const color1 = "#DFC84F";
-const color2 = "#080808";
-
 //Ajustes al body
 document.body.id = "body";
 document.body.style = "display: grid; background-color:rgb(238, 204, 51);"
@@ -32,9 +28,9 @@ divs.forEach(function(item){
 })
 
 //Barra de navegacion
-const navbar_element1 = div1.appendChild(document.createElement('a'));navbar_element1.innerHTML = "<i>Inicio</i>"; navbar_element1.href = "#";navbar_element1.style.order = "2"
-const navbar_element2 = div1.appendChild(document.createElement('a'));navbar_element2.innerHTML = "<i>Nosotros</i>"; navbar_element2.href = "#";navbar_element2.style.order = "3"
-const navbar_element3 = div1.appendChild(document.createElement('a'));navbar_element3.innerHTML = "<i>Ubicacion</i>"; navbar_element3.href = "#"; navbar_element3.style.order = "4"
+const navbar_element1 = div1.appendChild(document.createElement('a'));navbar_element1.innerHTML = "<i>Inicio</i>"; navbar_element1.href = "#div2";navbar_element1.style.order = "2"
+const navbar_element2 = div1.appendChild(document.createElement('a'));navbar_element2.innerHTML = "<i>Nosotros</i>"; navbar_element2.href = "#div3";navbar_element2.style.order = "3"
+const navbar_element3 = div1.appendChild(document.createElement('a'));navbar_element3.innerHTML = "<i>Imagenes</i>"; navbar_element3.href = "#div4"; navbar_element3.style.order = "4"
 const navbar_elements = [navbar_element1, navbar_element2, navbar_element3];
 navbar_elements.forEach(function (item) {
     item.className = "navbar_elements"    
@@ -80,19 +76,15 @@ var footer = div5.appendChild(document.createElement('footer'));
 footer.id = "footer"
 
 //Creo 3 divs dentro del div 5 para los caracteristicas
-var calidad_icon = div5.appendChild(document.createElement('img'));
-calidad_icon.id = "calidad_icon"; 
-calidad_icon.src = "img/calidad_icon.png"
-var confianza_icon = div5.appendChild(document.createElement('img'));
-confianza_icon.id = "confianza_icon";
-confianza_icon.src = "img/confianza_icon.png";
-var precios_icon = div5.appendChild(document.createElement('img'));
-precios_icon.id = "precios_icon";
-precios_icon.src = "img/precios_icon.png";
+var calidad_icon = addDiv("div5", "calidad_icon");
+var confianza_icon = addDiv("div5", "confianza_icon");
+var precios_icon = addDiv("div5", "precios_icon");
+var icons = [precios_icon, confianza_icon, calidad_icon]
+icons.forEach((item)=>{
+    item.className = "icons";
+})
 
 
-/*------------------------------------------------------------------------------------------*/ 
-/*----------------------------------------------ANIMACIONES DE LOS ELEMENTOS CREADOS--------------------------------------------*/ 
 //Animacion doble click sobre el logo
 var logo_anim = anime({
     targets: '#logo',
@@ -107,10 +99,11 @@ var logo_anim = anime({
     easing: 'easeInOutSine'
 })
 logo.ondblclick = logo_anim.play;
+
+//#region Galeria
 document.querySelectorAll(".g").forEach((el)=>{
    div4.appendChild(el);
 })
-
 let sliderImages = document.querySelectorAll(".slides"),
   arrowLeft = document.querySelector("#arrow-left"),
   arrowRight = document.querySelector("#arrow-right"),
@@ -120,42 +113,32 @@ function reset() {
   for (let i = 0; i < sliderImages.length; i++) {
     sliderImages[i].style.display = "none";
   }
-}
-  
+} 
 function startSlide() {
   reset();
   sliderImages[0].style.display = "block";
-}
-  
+} 
 function slideLeft() {
   reset();
   sliderImages[current - 1].style.display = "block";
   current--;
 }
-  
 function slideRight() {
   reset();
   sliderImages[current + 1].style.display = "block";
   current++;
 }
-  
 arrowLeft.addEventListener("click", function () {
   if (current === 0) {
     current = sliderImages.length;
   }
   slideLeft();
-});
-  
+});  
 arrowRight.addEventListener("click", function () {
   if (current === sliderImages.length - 1) {
     current = -1;
   }
   slideRight();
 });
-  
 startSlide();
-
-
-
-
-//Texto animado al cargar la pagina
+//#endregion
