@@ -64,7 +64,10 @@ var title_text = div2.appendChild(document.createElement('p'));
 title_text.id = "title_text";
 title_text.innerHTML = "Tu mercado de <span>confianza</span>.";
 
-
+//Añado un div al div 3 para colocar el cartel con la info de nosotros
+var about_div = addDiv("div3", "about_div");
+var p1 = about_div.appendChild(document.createElement('p')); p1.innerHTML = "Lörem ipsum proling nibås sedan paras danseoke. Reryling prosöska. Nålar anastik lykiligen ifall.";
+var p2 = about_div.appendChild(document.createElement('p')); p2.innerHTML = "Preskapet fåde vysk: som hasuse en infrade. Kavis prosa viren fastän gigalyr pede. Jer dingen. Maskapet kabel decin i vas att vas.";
 
 
 
