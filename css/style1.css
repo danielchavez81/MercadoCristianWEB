@@ -1,5 +1,9 @@
 *{
     font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
 }
 :root{
     --color1: #080808;
@@ -48,6 +52,16 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+
+#div4{
+    position: relative;
+    top: 930px;
+}
+
+#div5{
+    position: relative;
+    top: 930px;
 }
 .navbar_elements{
     color: var(--color5);
@@ -147,4 +161,13 @@
     color: var(--color1);
     margin: 5px;
     width: 500px;
+}
+
+#subdiv4{
+    position: absolute;
+    width: 1112px;
+    height: 927px;
+    left: 808px;
+    top: 0px;
+    background: #F5D95A;
 }
