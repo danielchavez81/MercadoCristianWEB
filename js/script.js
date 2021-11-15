@@ -29,9 +29,9 @@ divs.forEach(function(item){
 //#endregion
 
 //#region  Barra de navegacion
-const navbar_element1 = div1.appendChild(document.createElement('a'));navbar_element1.innerHTML = "<i>Inicio</i>"; navbar_element1.href = "#div2";navbar_element1.style.order = "2"
-const navbar_element2 = div1.appendChild(document.createElement('a'));navbar_element2.innerHTML = "<i>Nosotros</i>"; navbar_element2.href = "#div3";navbar_element2.style.order = "3"
-const navbar_element3 = div1.appendChild(document.createElement('a'));navbar_element3.innerHTML = "<i>Imagenes</i>"; navbar_element3.href = "#div4"; navbar_element3.style.order = "4"
+const navbar_element1 = div1.appendChild(document.createElement('a'));navbar_element1.innerHTML = "<i>Inicio</i>"; navbar_element1.href = "#div2";navbar_element1.style.order = "3"
+const navbar_element2 = div1.appendChild(document.createElement('a'));navbar_element2.innerHTML = "<i>Nosotros</i>"; navbar_element2.href = "#div3";navbar_element2.style.order = "4"
+const navbar_element3 = div1.appendChild(document.createElement('a'));navbar_element3.innerHTML = "<i>Imagenes</i>"; navbar_element3.href = "#div4"; navbar_element3.style.order = "5"
 const navbar_elements = [navbar_element1, navbar_element2, navbar_element3];
 navbar_elements.forEach(function (item) {
     item.className = "navbar_elements"    
@@ -41,10 +41,16 @@ const logo =  div1.appendChild(document.createElement('img'))
 logo.src = "img/logo1.png";
 logo.id = "logo";
 
+var animated_text = div1.appendChild(document.createElement('i'));
+animated_text.id = "animated_text";
+animated_text.innerHTML = "";
+animated_text.style.order = "2";
+
 //Funcion que hace a la barra de navegacion Sticky
 var sticky = div1.offsetTop;
 window.onscroll = function(){f()}
 function f(){
+    animated_text.style.display = "none";
     if (window.scrollY >= sticky) {
         div1.classList.add("sticky");
     }else{
@@ -63,7 +69,7 @@ function f(){
     //Añado el titulo al div 2
     var title_text = div2.appendChild(document.createElement('p'));
     title_text.id = "title_text";
-    title_text.innerHTML = "Tu mercado de <span>confianza</span>.";
+    title_text.innerHTML = 'Tu mercado de <span id="title_text_animation"></span>.';
     //#endregion
     
     //#region Div3
@@ -116,6 +122,16 @@ var logo_anim = anime({
     easing: 'easeInOutSine'
 })
 logo.ondblclick = logo_anim.play;
+var text_animation = new Typed('#animated_text',{strings: ['<q>David pecho frio</q>', '<q>texto de ejemplo</q>'],typeSpeed: '10',backSpeed: '5',loop: true})
+var title_animation = new Typed('#title_text_animation', {
+  strings: ['Confianza', 'Siempre'],
+  typeSpeed: '10',
+  backSpeed: '10',
+  loop: 'true',
+  startDelay: '5',
+  smartBackspace: false,
+  backDelay: '5'
+})
 //#endregion
 
 //#region Galeria
