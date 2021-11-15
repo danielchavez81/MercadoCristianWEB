@@ -69,8 +69,8 @@ function f(){
     //#region Div3
     //Añado un div al div 3 para colocar el cartel con la info de nosotros
     var about_div = addDiv("div3", "about_div");
-    var p1 = about_div.appendChild(document.createElement('p')); p1.innerHTML = "Lörem ipsum proling nibås sedan paras danseoke. Reryling prosöska. Nålar anastik lykiligen ifall.";
-    var p2 = about_div.appendChild(document.createElement('p')); p2.innerHTML = "Preskapet fåde vysk: som hasuse en infrade. Kavis prosa viren fastän gigalyr pede. Jer dingen. Maskapet kabel decin i vas att vas.";
+    var p1 = about_div.appendChild(document.createElement('p')); p1.innerHTML = "Somos el mercado de barrio más conocido de balsa las perlas especializado tanto en productos de almacen como articulos para el hogar.";
+    var p2 = about_div.appendChild(document.createElement('p')); p2.innerHTML = "Este local comenzó como un emprendimiento de venta de helados ambulante, y gracias a mucho esfuerzo evolucionó para convertirse en lo que es ahora.";
     //#endregion
     
     //#region Div4
@@ -160,3 +160,39 @@ arrowRight.addEventListener("click", function () {
 });
 startSlide();
 //#endregion
+
+
+
+//footer
+footer.style.width = "100vw";
+footer.style.height = "253px";
+footer.style.backgroundColor = "color_1";
+footer.style.display = "flex";
+footer.style.alignItems = "center";
+footer.style.justifyContent = "flex-start";
+footer.className="col-xs-3 col-sm-6 col-md-12";
+
+//elementos footer
+const boton_facebook=footer.appendChild(document.createElement('img')); boton_facebook.src="img/facebookIcon.png";boton_facebook.id="boton_facebook";boton_facebook.id="boton_fb";boton_facebook.className="botones_footer";
+boton_facebook.onclick = function(){
+  window.location.href = 'https://www.facebook.com/cristian.caniulef.5';
+};
+
+
+const boton_Email =footer.appendChild(document.createElement('img')); boton_Email.src="img/emailIcon.png";boton_Email.id="boton_Email";boton_Email.className="botones_footer";
+boton_Email.onclick = function(){
+    window.open('mailto:marcado.cristian.shippuden@gmail.com');
+};
+
+
+const boton_instagram =footer.appendChild(document.createElement('img')); boton_instagram.src="img/instagramIcon.png";boton_instagram.id="boton_ig";boton_instagram.className="botones_footer";
+boton_instagram.onclick = function(){
+  window.location.href = 'https://www.instagram.com/caniulefc/';
+};
+
+
+var maps_frame = document.getElementById('Maps_Frame');footer.appendChild(maps_frame);maps_frame.id="maps_frame";
+
+const Cristian_footer=footer.appendChild(document.createElement('p'));Cristian_footer.innerHTML="MERCADO CRISTIAN";Cristian_footer.id="titulo_footer";
+const frase_inspiradora=footer.appendChild(document.createElement('p')); frase_inspiradora.innerHTML="'Tu mejor profesor es tu mayor error'";frase_inspiradora.id="texto_footer";
+const coordenadas=footer.appendChild(document.createElement('p'));coordenadas.innerHTML="-38.98402717141526, -68.14075681438644";coordenadas.id="coordenadas";
