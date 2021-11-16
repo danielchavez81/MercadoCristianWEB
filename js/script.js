@@ -209,6 +209,6 @@ boton_instagram.onclick = function(){
 
 var maps_frame = document.getElementById('Maps_Frame');footer.appendChild(maps_frame);maps_frame.id="maps_frame";
 
-const Cristian_footer=footer.appendChild(document.createElement('p'));Cristian_footer.innerHTML="MERCADO CRISTIAN";Cristian_footer.id="titulo_footer";
+const Cristian_footer=footer.appendChild(document.createElement('p'));Cristian_footer.innerHTML="Mercado Cristian";Cristian_footer.id="titulo_footer";
 const frase_inspiradora=footer.appendChild(document.createElement('p')); frase_inspiradora.innerHTML="'Tu mejor profesor es tu mayor error'";frase_inspiradora.id="texto_footer";
 const coordenadas=footer.appendChild(document.createElement('p'));coordenadas.innerHTML="-38.98402717141526, -68.14075681438644";coordenadas.id="coordenadas";

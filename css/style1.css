@@ -296,15 +296,6 @@ body{
     transform: translateY(-10px);
 }
 
-#footer{
-    width: 100vw;
-    height: 290px;
-    background-color: var(--color1);
-    position: absolute;
-    top: 100%;
-    left: 0px;
-}
-
 .gallery_text{
     padding: 0;
     margin: 0;
@@ -314,6 +305,82 @@ body{
     font-size: 24px;
     color: var(--color1);
     font-weight: bolder;
+}
+#footer{
+    width: 100vw;
+    height: 290px;
+    background-color: var(--color1);
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 200px;
+}
+
+
+
+
+.my-float{
+    margin-top: 16px;
+}
+#maps_frame{
+border-radius: 2%;
+height: 250px;
+width: 250px;
+position: absolute;
+margin: 0px 10px;
+right: 120px;
+flex-shrink: 0;
+}
+
+#titulo_footer{
+font-size: 40px;
+color: var(--color5);
+position: absolute;
+width: min-content;
+}
+#texto_footer{
+font-size: 20px;
+color: var(--color5);
+position: absolute;
+text-align: center ;
+text-decoration: underline;
+width: 180px;
+font-weight: bold;
+}
+.botones_footer{
+position: absolute;
+
+}
+#boton_fb{
+
+
+}
+#boton_Email{
+
+}
+
+#boton_ig{
+
+}
+#coordenadas{
+font-family: Roboto;
+color: var(--color5);
+font-size: 10px;
+
+}
+
+#animated_text{
+    font-size: 24px;
+    color: var(--color1);
+    font-weight: lighter;
+    width: 250px;
+    height: 80px;
+    margin-right: 150px;
+    margin-top: 40px;
+    transition: all .420 ease;
 }
 
 .float{
@@ -336,82 +403,6 @@ body{
     color: #25d366;
     background-color: #fff;
 }
-
-.my-float{
-    margin-top: 16px;
-}
-#maps_frame{
-border-radius: 2%;
-height: 250px;
-width: 250px;
-position: absolute;
-margin: 0px 10px;
-right: 120px;
-flex-shrink: 0;
-}
-
-#titulo_footer{
-font-size: 40px;
-font-family: Roboto;
-color: var(--color5);
-left: 20px;
-position: absolute;
-width: 2px;
-font-weight: bolder;
-}
-#texto_footer{
-font-size: 20px;
-font-family: Roboto;
-color: var(--color5);
-position: absolute;
-text-align: center ;
-margin: auto;
-right: 500px;
-text-decoration: underline;
-width: 180px;
-font-weight: bold;
-}
-.botones_footer{
-position: absolute;
-margin:auto;
-
-}
-#boton_fb{
-left: 900px;
-
-}
-#boton_Email{
-left:500px;
-
-}
-
-#boton_ig{
-left: 700px;
-
-}
-#coordenadas{
-font-family: Roboto;
-color: var(--color5);
-font-size: 10px;
-position: absolute;
-right: 383px;
-bottom: -10px;
-}
-
-#animated_text{
-    font-size: 24px;
-    color: var(--color1);
-    font-weight: lighter;
-    width: 250px;
-    height: 80px;
-    margin-right: 150px;
-    margin-top: 40px;
-    transition: all .420 ease;
-}
-
-
-
-
 
 
 
