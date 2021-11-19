@@ -67,7 +67,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: var(--color2);
+    background: var(--color2) url("../img/backgroundDIV5.png");
 }
 .navbar_elements{
     color: var(--color1);
