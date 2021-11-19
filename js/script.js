@@ -150,6 +150,9 @@ var title_animation = new Typed("#title_text_animation", {
   smartBackspace: false,
   backDelay: "5",
 });
+var icons_animation = anime({
+  targets: '.icons'
+})
 //#endregion
 
 //#region Galeria
@@ -195,7 +198,7 @@ arrowRight.addEventListener("click", function () {
 startSlide();
 //#endregion
 
-//footer
+//#region FOOTER
 
 //elementos footer
 var boton_facebook = footer.appendChild(document.createElement("img"));
@@ -236,7 +239,7 @@ text_footer.id = "titulo_footer";
 text_footer.style.order = "1";
 
 var frase_inspiradora = footer.appendChild(document.createElement("p"));
-frase_inspiradora.innerHTML = "'Tu mejor profesor es tu mayor error'";
+frase_inspiradora.innerHTML = "<q>Tu mejor profesor es tu mayor error</q>";
 frase_inspiradora.id = "texto_footer";
 frase_inspiradora.style.order = "5"
 
@@ -245,3 +248,4 @@ coordenadas.innerHTML = "-38.98402717141526, -68.14075681438644";
 coordenadas.id = "coordenadas";
 coordenadas.style.order = "6";
 
+//#endregion

@@ -305,6 +305,7 @@ body{
     color: var(--color1);
     font-weight: bolder;
 }
+/* FOOTER
 #footer{
     width: 100vw;
     height: 290px;
@@ -317,13 +318,17 @@ body{
     flex-direction: row ;
 }
 #maps_frame{
-    margin: 0px 0px 0px auto;
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    margin: 0px 80px 0px auto;
+    border: 3px dashed var(--color3);
 }
 
 #titulo_footer{
     font-size: 48px;
     width: min-content;
-    margin: 0px 80px;
+    margin: 0px 20px 0px 80px;
     color: var(--color2);
     border: 2px dashed var(--color5);
 }
@@ -333,6 +338,22 @@ body{
 }
 .botones_footer:hover{
     transform: translateY(10px);
+}
+#texto_footer{
+    font-size: 40px;
+    font-style: italic;
+    color: var(--color5);
+    border-bottom: 5px groove var(--color2);
+    align-self: center;
+    justify-self: center;
+    margin: 0px 30px;
+}
+
+#coordenadas{
+    color: var(--color3);
+    width: min-content;
+    margin: 0 0 35px auto;
+    align-self: flex-end;
 }
 
 #animated_text{
@@ -361,6 +382,7 @@ body{
     z-index: 24;
     transition: all .3s ease;
 }
+*/
 
 .float:hover{
     color: #25d366;
