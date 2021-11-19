@@ -224,7 +224,6 @@ startSlide();
 //#endregion
 
 //#region FOOTER
-
 //elementos footer
 var boton_facebook = footer.appendChild(document.createElement("img"));
 boton_facebook.src = "img/facebookIcon.png";
@@ -274,3 +273,18 @@ coordenadas.id = "coordenadas";
 coordenadas.style.order = "6";
 
 //#endregion
+
+//#region SIDEBAR
+//Creo un div contenedor
+var sidebar_container = addDiv("div3", "sidebar_container");
+//Creo 3 elementos divs dentro de el div 3 dentro de un array
+var sidebar_elements = [addDiv("sidebar_container", "side-element1"), addDiv("sidebar_container", "side-element2"), addDiv("sidebar_container", "side-element3")];
+sidebar_elements.forEach((item)=>{
+  item.classList.add('sidebar_elements');
+});
+
+
+
+
+//#endregion
+

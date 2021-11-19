@@ -66,7 +66,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     background: var(--color2) url("../img/backgroundDIV5.png");
 }
 .navbar_elements{
@@ -391,6 +391,20 @@ body{
 .my-float{
     margin-top: 16px;
 }
+#sidebar_container{
+    width: 200px;
+    height: 100%;
+    background-color: var(--color4);
+}
+.sidebar_elements{
+    width: 200px;
+    height: 200px;
+    background-color: var(--color4);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
 
 
 
