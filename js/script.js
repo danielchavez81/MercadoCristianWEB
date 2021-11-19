@@ -198,41 +198,50 @@ startSlide();
 //footer
 
 //elementos footer
-const boton_facebook = footer.appendChild(document.createElement("img"));
+var boton_facebook = footer.appendChild(document.createElement("img"));
 boton_facebook.src = "img/facebookIcon.png";
-boton_facebook.id = "boton_facebook";
 boton_facebook.id = "boton_fb";
 boton_facebook.className = "botones_footer";
 boton_facebook.onclick = function () {
   window.location.href = "https://www.facebook.com/cristian.caniulef.5";
 };
+boton_facebook.style.order = "3"
 
-const boton_Email = footer.appendChild(document.createElement("img"));
+var boton_Email = footer.appendChild(document.createElement("img"));
 boton_Email.src = "img/emailIcon.png";
 boton_Email.id = "boton_Email";
 boton_Email.className = "botones_footer";
 boton_Email.onclick = function () {
   window.open("mailto:marcado.cristian.shippuden@gmail.com");
 };
+boton_Email.style.order = "2";
 
-const boton_instagram = footer.appendChild(document.createElement("img"));
+var boton_instagram = footer.appendChild(document.createElement("img"));
 boton_instagram.src = "img/instagramIcon.png";
 boton_instagram.id = "boton_ig";
 boton_instagram.className = "botones_footer";
 boton_instagram.onclick = function () {
   window.location.href = "https://www.instagram.com/caniulefc/";
 };
+boton_instagram.style.order = "4"
 
 var maps_frame = document.getElementById("Maps_Frame");
 footer.appendChild(maps_frame);
 maps_frame.id = "maps_frame";
+maps_frame.style.order = "7"
 
-const Cristian_footer = footer.appendChild(document.createElement("p"));
-Cristian_footer.innerHTML = "Mercado Cristian";
-Cristian_footer.id = "titulo_footer";
-const frase_inspiradora = footer.appendChild(document.createElement("p"));
+var text_footer = footer.appendChild(document.createElement("p"));
+text_footer.innerHTML = "Mercado Cristian";
+text_footer.id = "titulo_footer";
+text_footer.style.order = "1";
+
+var frase_inspiradora = footer.appendChild(document.createElement("p"));
 frase_inspiradora.innerHTML = "'Tu mejor profesor es tu mayor error'";
 frase_inspiradora.id = "texto_footer";
-const coordenadas = footer.appendChild(document.createElement("p"));
+frase_inspiradora.style.order = "5"
+
+var coordenadas = footer.appendChild(document.createElement("p"));
 coordenadas.innerHTML = "-38.98402717141526, -68.14075681438644";
 coordenadas.id = "coordenadas";
+coordenadas.style.order = "6";
+

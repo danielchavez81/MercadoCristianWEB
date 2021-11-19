@@ -313,53 +313,26 @@ body{
     top: 100%;
     left: 0px;
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    gap: 200px;
+    align-items: center;
+    flex-direction: row ;
 }
 #maps_frame{
-    border-radius: 2%;
-    height: 250px;
-    width: 250px;
-    position: absolute;
-    margin: 0px 10px;
-    right: 120px;
-    flex-shrink: 0;
+    margin: 0px 0px 0px auto;
 }
 
 #titulo_footer{
-    font-size: 40px;
-    color: var(--color5);
-    position: absolute;
+    font-size: 48px;
     width: min-content;
-    }
-#texto_footer{
-    font-size: 20px;
-    color: var(--color5);
-    position: absolute;
-    text-align: center ;
-    text-decoration: underline;
-    width: 180px;
-    font-weight: bold;
+    margin: 0px 80px;
+    color: var(--color2);
+    border: 2px dashed var(--color5);
 }
 .botones_footer{
-    position: absolute;
+    margin: 15px;
+    transition: all .1s ease-in;
 }
-#boton_fb{
-
-
-}
-#boton_Email{
-
-}
-
-#boton_ig{
-
-}
-#coordenadas{
-font-family: Roboto;
-color: var(--color5);
-font-size: 10px;
+.botones_footer:hover{
+    transform: translateY(10px);
 }
 
 #animated_text{
