@@ -1,6 +1,7 @@
 //Ajustes al body
-document.body.id = "body";
-document.body.style = "display: grid; background-color:rgb(238, 204, 51);";
+var body = document.body;
+body.id = "body";
+body.style = "display: grid; background-color:rgb(238, 204, 51);";
 
 //Funcion para crear divs, parametros: id del padre, id propia del div
 function addDiv(IDpadre, id) {
@@ -56,12 +57,12 @@ animated_text.innerHTML = "";
 animated_text.style.order = "2";
 
 //Funcion que hace a la barra de navegacion Sticky
-var sticky = div1.offsetTop;
+var sticky = 1;
 window.onscroll = function () {
   f();
 };
 function f() {
-  animated_text.style.display = "none";
+  animated_text.style.opacity = "0%";
   if (window.scrollY >= sticky) {
     div1.classList.add("sticky");
   } else {
@@ -138,6 +139,7 @@ var text_animation = new Typed("#animated_text", {
   typeSpeed: "10",
   backSpeed: "5",
   loop: true,
+  showCursor: false
 });
 var title_animation = new Typed("#title_text_animation", {
   strings: ["Confianza", "Siempre"],
