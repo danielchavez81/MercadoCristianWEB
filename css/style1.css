@@ -305,7 +305,7 @@ body{
     color: var(--color1);
     font-weight: bolder;
 }
-/* FOOTER
+/* FOOTER*/
 #footer{
     width: 100vw;
     height: 290px;
@@ -382,7 +382,7 @@ body{
     z-index: 24;
     transition: all .3s ease;
 }
-*/
+/**/
 
 .float:hover{
     color: #25d366;

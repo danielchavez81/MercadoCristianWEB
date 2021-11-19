@@ -150,9 +150,34 @@ var title_animation = new Typed("#title_text_animation", {
   smartBackspace: false,
   backDelay: "5",
 });
-var icons_animation = anime({
-  targets: '.icons'
+
+var icon1_anim = anime({
+  targets: '#calidad_icon',
+  keyframes: [{ rotate: "15deg" }, { rotate: "-15deg" }, { rotate: "0deg" }],
+  autoplay: false,
+  loop: false,
+  easing: 'easeInOutSine'
 })
+calidad_icon.ondblclick = icon1_anim.play;
+
+var icon2_anim = anime({
+  targets: '#confianza_icon',
+  keyframes: [{ rotate: "15deg" }, { rotate: "-15deg" }, { rotate: "0deg" }],
+  autoplay: false,
+  loop: false,
+  easing: 'easeInOutSine'
+})
+confianza_icon.ondblclick = icon2_anim.play;
+
+var icon3_anim = anime({
+  targets: '#precios_icon',
+  keyframes: [{ rotate: "15deg" }, { rotate: "-15deg" }, { rotate: "0deg" }],
+  autoplay: false,
+  loop: false,
+  easing: 'easeInOutSine'
+})
+precios_icon.ondblclick = icon3_anim.play;
+
 //#endregion
 
 //#region Galeria
