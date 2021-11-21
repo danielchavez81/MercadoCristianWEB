@@ -50,7 +50,7 @@ body{
     top: 930px;
     background-color: var(--color2);
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -66,7 +66,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     background: var(--color2) url("../img/backgroundDIV5.png");
 }
 .navbar_elements{
@@ -135,6 +135,21 @@ body{
     top:199px;
     left: 0px;
 }
+#sidebar_container{
+    width: 300px;
+    height: 100%;
+    background-color: var(--color4);
+
+}
+.sidebar_elements{
+    width: 200px;
+    height: 200px;
+    background-color: var(--color4);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+/*
 #about_div{
     width: 1320px;
     height: 600px;
@@ -170,7 +185,7 @@ body{
     color: var(--color1);
     margin: 5px;
     width: 500px;
-}
+}^*/
 
 #subdiv4{
     position: absolute;
@@ -391,19 +406,7 @@ body{
 .my-float{
     margin-top: 16px;
 }
-#sidebar_container{
-    width: 200px;
-    height: 100%;
-    background-color: var(--color4);
-}
-.sidebar_elements{
-    width: 200px;
-    height: 200px;
-    background-color: var(--color4);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
+
 
 
 

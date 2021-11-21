@@ -282,6 +282,8 @@ var sidebar_elements = [addDiv("sidebar_container", "side-element1"), addDiv("si
 sidebar_elements.forEach((item)=>{
   item.classList.add('sidebar_elements');
 });
+//Escondo el div about
+about_div.style.display = "none";
 
 
 
