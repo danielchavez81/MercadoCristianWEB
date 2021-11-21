@@ -173,7 +173,6 @@ sidebar_elements.forEach((item)=>{
 
 
 
-
 //Codigo antiguo comentado por si se tiene que usar o revisar posteriormente
 
 //#region Creacion de parent divs

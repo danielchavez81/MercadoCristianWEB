@@ -31,17 +31,15 @@ body{
 /*--NAVBAR--*/
 #div1{
     width: 100%;
-    overflow: hidden;
     background: transparent;
     height: 110px;
-    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     z-index: 12;
-    padding: 0px 110px 0px 0px;
     transition: all .3s ease;
+    position: sticky;
 }
     .navbar_elements{
         color: var(--color1);
@@ -69,265 +67,214 @@ body{
     }
     #logo{
         order: 1;
-        margin: 0px auto 0px 210px;
+        margin: 8px auto 0px 210px;
+    }
+
+/*--DIV 2--*/
+/*--PANTALLA PRINCIPAL--*/
+#div2{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--color2);
+    height: 100vh;
+    overflow: hidden;
+}
+    #title_text{
+        z-index: 3;
+        margin: 210px;
+        font-size: 66px;
+        width: 435px;
+        color: var(--color1);
+        font-weight:bolder;
+        position: relative;
+    }
+    #title_text span {
+        color: #FFFFFF;
+    }
+    #title_text::before{
+        content: "";
+        background-color: var(--color1);
+        position: absolute;
+        width: 400px;
+        height: 3px;
+        top: 100%;
+        left: -200px;
+        transform: translate(50%, 50%);
+    }
+    #title_text::after{
+        content: "Desde 2010 con vos.";
+        color: var(--color1);
+        opacity: 55%;
+        font-size: 30px;
+        position: absolute;
+        top: 200px;
+        left: 0px;
     }
 
 
-#div2{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    background-color: var(--color2);
-    height: 100vh;
-    position: absolute;
-    overflow-y: hidden;
-}
+/*--DIV 3--*/
+/*--INFORMACION DEL LOCAL--*/   
 #div3{
-    position: relative;
-    top: 930px;
     background-color: var(--color2);
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 100vh;
+    position: relative;
+    top: 100vh;
 }
+    #sidebar_container{
+        width: 300px;
+        background-color: var(--color4);
+    }
+    .sidebar_elements{
+        width: 200px;
+        height: 200px;
+        background-color: var(--color4);
+    }
+
 
 #div4{
     position: relative;
-    top: 930px;
+    top: 100vh;
     background: var(--color2);
 }
+    #subdiv4{
+        position: absolute;
+        width: 680px;
+        height: 600px;
+        left: 1100px;
+        top: 120px;
+        background-color: var(--color3);
+        border: 4px dashed var(--color1);
+    }
+
+    #illustration_svg{
+        position: absolute;
+        width: 651.25px;
+        height: 531.89px;
+        left: 1100px;
+        top: 160px;
+        z-index: 2;
+    }
+
+    .slides{
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 800px;
+        height: 600px;
+        overflow-x: hidden;
+        overflow-y: visible;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        left: 200px;
+        top: 117px;
+        border: 5px solid var(--color1);
+    }
+            .slide1 {background-image: url("../img/bg1.png");}
+            .slide2 {background-image: url("../img/bg2.png");}
+            .slide3 {background-image: url("../img/bg3.png");}
+            .arrow {
+                cursor: pointer;
+                position: absolute;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                top: 400px;
+                left: 0px;
+                z-index: 3;
+            }
+            #arrow-left {
+                border-width: 20px 30px 20px 0;
+                border-color: transparent var(--color2) transparent transparent;
+                left: 210px;
+            }
+            #arrow-right {
+                border-width: 20px 0 20px 30px;
+                border-color: transparent transparent transparent var(--color2);
+                left: 955px;
+            }
+
+            
 #div5{
     position: relative;
-    top: 930px;
+    top: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background: var(--color2) url("../img/backgroundDIV5.png");
 }
+    #calidad_icon{
+        position: relative;
+        background-image: url("../img/calidad_icon.png");
+        width: 180px;
+        height: 180px;
+    }
+    #calidad_icon::before{
+        content: "Calidad";
+        position: absolute;
+        top: 205px;
+        left: 50px;
+        font-size: 35px;
+        font-weight: bolder;
+        color: var(--color1);
+    }
+    #confianza_icon{
+        position: relative;
+        background-image: url("../img/confianza_icon.png");
+        width: 180px;
+        height: 180px;
+    }
+    #confianza_icon::before{
+        content: "Confianza";
+        position: absolute;
+        top: 205px;
+        left: 10px;
+        font-size: 35px;
+        font-weight: bolder;
+        color: var(--color1);
+    }
+    #precios_icon{
+        position: relative;
+        background-image: url("../img/precios_icon.png");
+        width: 180px;
+        height: 180px;
+    }
 
-#title_text{
-    z-index: 3;
-    margin: 210px;
-    font-size: 66px;
-    width: 430px;
-    color: var(--color1);
-    font-weight:bolder;
-    position: relative;
-}
-#title_text span {
-    color: #FFFFFF;
-}
-#title_text::before{
-    content: "";
-    background-color: var(--color1);
-    position: absolute;
-    width: 400px;
-    height: 3px;
-    top: 100%;
-    left: -200px;
-    transform: translate(50%, 50%);
-}
-#title_text::after{
-    content: "Desde 2010 con vos.";
-    color: var(--color1);
-    opacity: 55%;
-    font-size: 30px;
-    position: absolute;
-    top: 200px;
-    left: 0px;
-}
-#wave_svg{
-    position: absolute;
-    top:199px;
-    left: 0px;
-}
-#sidebar_container{
-    width: 300px;
-    height: 100%;
-    background-color: var(--color4);
+    #precios_icon::before{
+        content: "Precios";
+        position: absolute;
+        top: 205px;
+        left: 25px;
+        font-size: 35px;
+        font-weight: bolder;
+        color: var(--color1);
+    }
 
-}
-.sidebar_elements{
-    width: 200px;
-    height: 200px;
-    background-color: var(--color4);
-    position: absolute;
-    top: 0px;
-    left: 0px;
-}
-/*
-#about_div{
-    width: 1320px;
-    height: 600px;
-    background-color: var(--color3);
-    z-index: 2;
-    position: relative;
-    border: 5px solid var(--color1);
-    border-right: none;
-    padding: 160px 5px 160px 190px;
-    display: flex;
-    flex-direction: row;
-}
-#about_div::before{
-    content: "Acerca de nosotros.";
-    color: var(--color1);
-    position: absolute;
-    font-size: 35px;
-    top: 50px;
-    font-weight: bolder;
-}
-#about_div::after{
-    content: "";
-    background-color: var(--color2);
-    position: absolute;
-    width: 320px;
-    height: 5px;
-    top: 100px;
-}
+    .icons{
+        transition: all .1s ease-in;
+        margin: 180px;
+    }
 
-#about_div p{
-    font-size: 35px;
-    font-weight: bold;
-    color: var(--color1);
-    margin: 5px;
-    width: 500px;
-}^*/
+    .icons:hover{
+        transform: translateY(-10px);
+    }
 
-#subdiv4{
-    position: absolute;
-    width: 680px;
-    height: 600px;
-    left: 1100px;
-    top: 120px;
-    background-color: var(--color3);
-    border: 4px dashed var(--color1);
-}
+    .gallery_text{
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 80px;
+        left: 550px;
+        font-size: 24px;
+        color: var(--color1);
+        font-weight: bolder;
+    }
 
-#illustration_svg{
-    position: absolute;
-    width: 651.25px;
-    height: 531.89px;
-    left: 1100px;
-    top: 160px;
-    z-index: 2;
-}
-
-.slides{
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 800px;
-    height: 600px;
-    overflow-x: hidden;
-    overflow-y: visible;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    left: 200px;
-    top: 117px;
-    border: 5px solid var(--color1);
-}
-.slide1 {background-image: url("../img/bg1.png");}
-.slide2 {background-image: url("../img/bg2.png");}
-.slide3 {background-image: url("../img/bg3.png");}
-.arrow {
-    cursor: pointer;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    top: 400px;
-    left: 0px;
-    z-index: 3;
-}
-#arrow-left {
-    border-width: 20px 30px 20px 0;
-    border-color: transparent var(--color2) transparent transparent;
-    left: 210px;
-}
-#arrow-right {
-    border-width: 20px 0 20px 30px;
-    border-color: transparent transparent transparent var(--color2);
-    left: 955px;
-}
-
-.icons{
-    transition: all .1s ease-in;
-    margin: 500px;
-}
-
-.icons:hover{
-    transform: translateY(-10px);
-}
-
-#calidad_icon{
-    position: relative;
-    background-image: url("../img/calidad_icon.png");
-    width: 180px;
-    height: 180px;
-}
-#calidad_icon::before{
-    content: "Calidad";
-    position: absolute;
-    top: 205px;
-    left: 50px;
-    font-size: 35px;
-    font-weight: bolder;
-    color: var(--color1);
-}
-#confianza_icon{
-    position: relative;
-    background-image: url("../img/confianza_icon.png");
-    width: 180px;
-    height: 180px;
-}
-#confianza_icon::before{
-    content: "Confianza";
-    position: absolute;
-    top: 205px;
-    left: 10px;
-    font-size: 35px;
-    font-weight: bolder;
-    color: var(--color1);
-}
-#precios_icon{
-    position: relative;
-    background-image: url("../img/precios_icon.png");
-    width: 180px;
-    height: 180px;
-}
-
-#precios_icon::before{
-    content: "Precios";
-    position: absolute;
-    top: 205px;
-    left: 25px;
-    font-size: 35px;
-    font-weight: bolder;
-    color: var(--color1);
-}
-
-.icons{
-    transition: all .1s ease-in;
-    margin: 180px;
-}
-
-.icons:hover{
-    transform: translateY(-10px);
-}
-
-.gallery_text{
-    padding: 0;
-    margin: 0;
-    position: absolute;
-    top: 80px;
-    left: 550px;
-    font-size: 24px;
-    color: var(--color1);
-    font-weight: bolder;
-}
 /* FOOTER*/
 #footer{
     width: 100vw;
@@ -340,44 +287,44 @@ body{
     align-items: center;
     flex-direction: row ;
 }
-#maps_frame{
-    width: 250px;
-    height: 250px;
-    flex-shrink: 0;
-    margin: 0px 80px 0px auto;
-    border: 3px dashed var(--color3);
-}
+    #maps_frame{
+        width: 250px;
+        height: 250px;
+        flex-shrink: 0;
+        margin: 0px 80px 0px auto;
+        border: 3px dashed var(--color3);
+    }
 
-#titulo_footer{
-    font-size: 48px;
-    width: min-content;
-    margin: 0px 20px 0px 80px;
-    color: var(--color2);
-    border: 2px dashed var(--color5);
-}
-.botones_footer{
-    margin: 15px;
-    transition: all .1s ease-in;
-}
-.botones_footer:hover{
-    transform: translateY(10px);
-}
-#texto_footer{
-    font-size: 40px;
-    font-style: italic;
-    color: var(--color5);
-    border-bottom: 5px groove var(--color2);
-    align-self: center;
-    justify-self: center;
-    margin: 0px 30px;
-}
+    #title_footer{
+        font-size: 48px;
+        width: min-content;
+        margin: 0px 20px 0px 80px;
+        color: var(--color2);
+        border: 2px dashed var(--color5);
+    }
+    .footer_icons{
+        margin: 15px;
+        transition: all .1s ease-in;
+    }
+    .footer_icons:hover{
+        transform: translateY(10px);
+    }
+    #text_footer{
+        font-size: 40px;
+        font-style: italic;
+        color: var(--color5);
+        border-bottom: 5px groove var(--color2);
+        align-self: center;
+        justify-self: center;
+        margin: 0px 30px;
+    }
 
-#coordenadas{
-    color: var(--color3);
-    width: min-content;
-    margin: 0 0 35px auto;
-    align-self: flex-end;
-}
+    #coords{
+        color: var(--color3);
+        width: min-content;
+        margin: 0 0 35px auto;
+        align-self: flex-end;
+    }
 
 #animated_text{
     font-size: 24px;
