@@ -52,6 +52,7 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    height: 100vh;
 }
 
 #div4{
@@ -405,6 +406,15 @@ body{
 }
 .my-float{
     margin-top: 16px;
+}
+
+#bg_gradient{
+    position: absolute;
+    width: 1920px;
+    height: inherit;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(90deg, #FFCE02 0%, #F2CC2E 56.66%);
 }
 
 
