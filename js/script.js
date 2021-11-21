@@ -75,8 +75,7 @@ function f() {
 
 //#region Div2
 //Añado el vector adentro de el div 2
-var svg_wave = document.getElementById("wave_svg");
-div2.appendChild(svg_wave);
+
 
 //Añado el titulo al div 2
 var title_text = div2.appendChild(document.createElement("p"));
@@ -112,7 +111,7 @@ gallery_text.textContent = "Galeria de fotos";
 var footer = div5.appendChild(document.createElement("footer"));
 footer.id = "footer";
 
-//Creo 3 divs dentro del div 5 para los caracteristicas
+//Creo 3 divs dentro del div 5 para los iconos
 var calidad_icon = addDiv("div5", "calidad_icon");
 var confianza_icon = addDiv("div5", "confianza_icon");
 var precios_icon = addDiv("div5", "precios_icon");
