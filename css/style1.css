@@ -1,7 +1,9 @@
+/*AJUSTES GENERALES*/
 *{
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+/*AJUSTES AL BODY Y VARIABLES DE COLOR*/
 body{
     overflow-x: hidden;
 }
@@ -12,6 +14,8 @@ body{
     --color4: #FFEB8F;
     --color5: #FFFFFF;
 }
+
+/*AJUSTES A LOS PARENT DIVS*/
 .sticky{
     position: fixed;
     top: 0px;
@@ -22,6 +26,9 @@ body{
     height: 100vh;
     background-color: var(--color3);
 }
+
+/*--DIV 1--*/
+/*--NAVBAR--*/
 #div1{
     width: 100%;
     overflow: hidden;
@@ -36,6 +43,35 @@ body{
     padding: 0px 110px 0px 0px;
     transition: all .3s ease;
 }
+    .navbar_elements{
+        color: var(--color1);
+        margin: 0px 10px;
+        height: 50px;
+        width: 140px;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight:bold;
+        transition: all 0.3s ease-out, color 0.3s;
+        z-index: 24;
+        background-color: var(--color4);
+        border-top: 3px solid var(--color1);
+        overflow-y: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar_elements i{
+        font-style: normal;
+    }
+    .navbar_elements:hover{
+        color: var(--color5);
+        background-color: var(--color1);
+    }
+    #logo{
+        order: 1;
+        margin: 0px auto 0px 210px;
+    }
+
 
 #div2{
     display: flex;
@@ -44,6 +80,7 @@ body{
     background-color: var(--color2);
     height: 100vh;
     position: absolute;
+    overflow-y: hidden;
 }
 #div3{
     position: relative;
@@ -60,7 +97,6 @@ body{
     top: 930px;
     background: var(--color2);
 }
-
 #div5{
     position: relative;
     top: 930px;
@@ -69,35 +105,6 @@ body{
     justify-content: center;
     align-items: center;
     background: var(--color2) url("../img/backgroundDIV5.png");
-}
-.navbar_elements{
-    color: var(--color1);
-    margin: 0px 10px;
-    height: 50px;
-    width: 140px;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight:bold;
-    transition: all 0.3s ease-out, color 0.3s;
-    z-index: 24;
-    background-color: var(--color4);
-    border-top: 3px solid var(--color1);
-    overflow-y: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.navbar_elements i{
-    font-style: normal;
-}
-.navbar_elements:hover{
-    color: var(--color5);
-    background-color: var(--color1);
-}
-
-#logo{
-    order: 1;
-    margin: 0px auto 0px 210px;
 }
 
 #title_text{
