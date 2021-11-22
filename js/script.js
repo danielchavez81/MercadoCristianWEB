@@ -1,7 +1,7 @@
 //Ajustes al body
 var body = document.body;
 body.id = "body";
-body.style = "display: grid; background-color:rgb(238, 204, 51);";
+body.style = "background-color:#F5D95A;";
 
 //Funcion para crear divs, parametros: id del padre, id propia del div
 function addDiv(IDpadre, id) {
@@ -10,6 +10,18 @@ function addDiv(IDpadre, id) {
   element.id = id;
   parent.appendChild(element);
   return element;
+}
+var sticky = 1;
+window.onscroll = function () {
+  f();
+};
+function f() {
+  animated_text.style.opacity = "0%";
+  if (window.scrollY >= sticky) {
+    div1.classList.add("sticky");
+  } else {
+    div1.classList.remove("sticky");
+  }
 }
 
 //#region Animaciones
@@ -101,6 +113,7 @@ arrowRight.addEventListener("click", function () {
 startSlide();
 //#endregion
 
+//Codigo antiguo comentado por si se tiene que usar o revisar posteriormente
 //#region FOOTER
 //elementos footer
 /*
@@ -154,27 +167,6 @@ coordenadas.style.order = "6";
 */
 //#endregion
 
-//#region SIDEBAR
-//Creo un div contenedor
-var sidebar_container = addDiv("div3", "sidebar_container");
-//Creo 3 elementos divs dentro de el div 3 dentro de un array
-var sidebar_elements = [addDiv("sidebar_container", "side-element1"), addDiv("sidebar_container", "side-element2"), addDiv("sidebar_container", "side-element3")];
-sidebar_elements.forEach((item)=>{
-  item.classList.add('sidebar_elements');
-});
-
-
-
-
-//#endregion
-
-
-
-
-
-
-//Codigo antiguo comentado por si se tiene que usar o revisar posteriormente
-
 //#region Creacion de parent divs
 /*
 //Creo los divs padres
@@ -223,18 +215,7 @@ animated_text.innerHTML = "";
 animated_text.style.order = "2";
 */
 //Funcion que hace a la barra de navegacion Sticky
-var sticky = 1;
-window.onscroll = function () {
-  f();
-};
-function f() {
-  animated_text.style.opacity = "0%";
-  if (window.scrollY >= sticky) {
-    div1.classList.add("sticky");
-  } else {
-    div1.classList.remove("sticky");
-  }
-}
+
 //#endregion
 
 //#region Elementos hijos de los divs

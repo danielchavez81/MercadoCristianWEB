@@ -18,7 +18,7 @@ body{
 /*AJUSTES A LOS PARENT DIVS*/
 .sticky{
     position: fixed;
-    top: 0px;
+    top: 0;
     width: 100vw;
 }
 .parent_containers{
@@ -73,12 +73,12 @@ body{
 /*--DIV 2--*/
 /*--PANTALLA PRINCIPAL--*/
 #div2{
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: var(--color2);
-    height: 100vh;
+    height: calc(100vh - 110px);
     overflow: hidden;
 }
     #title_text{
@@ -112,6 +112,17 @@ body{
         top: 200px;
         left: 0px;
     }
+    .bg_gradient{
+        position: absolute;
+        width: 1920px;
+        height: inherit;
+        left: 0px;
+        top: 0px;
+        background: linear-gradient(90deg, #FFCE02 0%, #F2CC2E 56.66%);
+    }
+    
+    
+
 
 
 /*--DIV 3--*/
@@ -122,7 +133,6 @@ body{
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    top: 100vh;
 }
     #sidebar_container{
         width: 300px;
@@ -137,7 +147,6 @@ body{
 
 #div4{
     position: relative;
-    top: 100vh;
     background: var(--color2);
 }
     #subdiv4{
@@ -201,7 +210,6 @@ body{
             
 #div5{
     position: relative;
-    top: 100vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -362,13 +370,10 @@ body{
     margin-top: 16px;
 }
 
-#bg_gradient{
+#ref{
     position: absolute;
-    width: 1920px;
-    height: inherit;
-    left: 0px;
-    top: 0px;
-    background: linear-gradient(90deg, #FFCE02 0%, #F2CC2E 56.66%);
+    top:0;
+    left: 0;
 }
 
 
