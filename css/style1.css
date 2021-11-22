@@ -124,14 +124,22 @@ body{
     position: relative;
     top: 100vh;
 }
-    #sidebar_container{
-        width: 300px;
-        background-color: var(--color4);
+    .sidebar_container{
+        position: relative;
+        width: 600px;
+        height: fit-content;
     }
     .sidebar_elements{
-        width: 200px;
-        height: 200px;
-        background-color: var(--color4);
+        display: flex;
+        background-color: var(--color5);
+        height: 110px;
+        margin: 20px 20px 20px 0px;
+        border-radius: 0px 55px 55px 0px;
+        border: 5px solid var(--color1);
+        border-left: none;
+        justify-content: center;
+        align-items: center;
+        font-size: 48px;
     }
 
 
