@@ -59,6 +59,26 @@ var icon3_anim = anime({
 })
 precios_icon.ondblclick = icon3_anim.play;
 
+//Creo las animaciones de los paneles que muestran la info de local
+
+var panels = document.querySelectorAll(".panels_info");
+panels.forEach((item)=>{
+  item.classList.add("hide");
+})
+var about_panel = document.querySelector('#about_panel');
+var obj_panel = document.querySelector('#objectives_panel');
+var history_panel = document.querySelector('#history_panel');
+function showPanel(index){
+  switch (index){
+    case 1:
+      movePanel(1, "show");
+      movePanel(2, "hide");
+      movePanel(3, "hide");
+  }
+}
+function movePanel(panel, state) {
+  
+}
 //#endregion
 
 //#region Galeria
@@ -153,6 +173,12 @@ coordenadas.id = "coordenadas";
 coordenadas.style.order = "6";
 */
 //#endregion
+
+
+
+
+
+
 
 
 //Codigo antiguo comentado por si se tiene que usar o revisar posteriormente

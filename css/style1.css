@@ -141,6 +141,22 @@ body{
         align-items: center;
         font-size: 48px;
     }
+    .panels_container{
+        background-color: var(--color5);
+        width: 1100px;
+    }
+    .panels_info{
+        position: absolute;
+        width: 1118px;
+        height: 600px;
+        left: 1910px;
+        top: 131px;
+
+        background: #FFCF26;
+        border: 5px solid #000000;
+        box-sizing: border-box;
+        border-radius: 76px;
+    }
 
 
 #div4{
@@ -378,7 +394,9 @@ body{
     top: 0px;
     background: linear-gradient(90deg, #FFCE02 0%, #F2CC2E 56.66%);
 }
-
+.hide{
+    opacity: 0%;
+}
 
 
 

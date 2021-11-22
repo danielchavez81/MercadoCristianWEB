@@ -37,9 +37,20 @@
     <!--DIV 3: Informacion del local-->
     <div class="parent_containers" id="div3">
         <div class="sidebar_container">
-            <div class="sidebar_elements">Acerca de nosotros</div>
-            <div class="sidebar_elements">Nuestros objetivos</div>
-            <div class="sidebar_elements">Un poco de historia</div>
+            <div class="sidebar_elements" onclick="showPanel(1)">Acerca de nosotros</div>
+            <div class="sidebar_elements" onclick="showPanel(2)">Nuestros objetivos</div>
+            <div class="sidebar_elements" onclick="showPanel(3)">Un poco de historia</div>
+        </div>
+        <div class="panels_container">
+            <div class="panels_info" id="about_panel">
+                
+            </div>
+            <div class="panels_info" id="objectives_panel">
+
+            </div>
+            <div class="panels_info" id="history_panel">
+
+            </div>
         </div>
     </div>
 
