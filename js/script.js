@@ -1,7 +1,6 @@
 //Ajustes al body
 var body = document.body;
 body.id = "body";
-body.style = "background-color:#F5D95A;";
 
 //Funcion para crear divs, parametros: id del padre, id propia del div
 function addDiv(IDpadre, id) {
