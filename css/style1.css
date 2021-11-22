@@ -53,12 +53,13 @@ body{
         font-weight:bold;
         transition: all 0.3s ease-out, color 0.3s;
         z-index: 24;
-        background-color: var(--color4);
-        border-top: 3px solid var(--color1);
+        background-color: var(--color6);
         overflow-y: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
+        border: 2px solid var(--color1);
+        border-radius: 10px;
     }
     .navbar_elements i{
         font-style: normal;
@@ -91,6 +92,7 @@ body{
         color: var(--color1);
         font-weight:bolder;
         position: relative;
+        top: -80px;
     }
     #title_text span {
         color: #FFFFFF;
@@ -161,7 +163,7 @@ body{
         left: 975px;
         top: 200px;
     }
-    .background_image{
+    #background_div3{
         background: url("../img/backgroundPattern.png");
         position: absolute;
         width: 1236px;
@@ -170,27 +172,66 @@ body{
         top: 0px;
     }
 
-
 #div4{
+    position: relative;
+    background-color: var(--color2);
+}
+    #div4 > h1{
+        position: absolute;
+        width: 645px;
+        height: 73px;
+        left: 1000px;
+        top: 188px;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 72px;
+        line-height: 84px;
+        color: var(--color1);
+    }
+    #div4 > p{
+        position: absolute;
+        width: 707px;
+        height: 392px;
+        left: 1000px;
+        top: 309px;
+        
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        color: var(--color1);
+    }
+    #div4 > img{
+        position: absolute;
+        width: 560px;
+        height: 662px;
+        left: 200px;
+        top: 133px;
+    }
+    #background_div4{
+        background: url("../img/backgroundPattern.png");
+        position: absolute;
+        width: 1202px;
+        height: 901.5px;
+        transform: rotate(-180deg);
+    }
+
+
+
+#div5{
     position: relative;
     background: var(--color2);
 }
-    #subdiv4{
-        position: absolute;
-        width: 680px;
-        height: 600px;
-        left: 1100px;
-        top: 120px;
-        background-color: var(--color3);
-        border: 4px dashed var(--color1);
-    }
 
     #illustration_svg{
         position: absolute;
         width: 651.25px;
         height: 531.89px;
-        left: 1100px;
-        top: 160px;
+        left: 1220px;
+        top: 274px;
         z-index: 2;
     }
 
@@ -198,16 +239,16 @@ body{
         position: absolute;
         margin: 0;
         padding: 0;
-        width: 800px;
-        height: 600px;
         overflow-x: hidden;
         overflow-y: visible;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        left: 200px;
-        top: 117px;
-        border: 5px solid var(--color1);
+        border: 1px solid var(--color1);
+        width: 1090px;
+        height: 772px;
+        left: 95px;
+        top: 89px;
     }
             .slide1 {background-image: url("../img/bg1.png");}
             .slide2 {background-image: url("../img/bg2.png");}
@@ -218,29 +259,49 @@ body{
                 width: 0;
                 height: 0;
                 border-style: solid;
-                top: 400px;
+                top: calc(772px / 2 + 50px);
                 left: 0px;
                 z-index: 3;
             }
             #arrow-left {
                 border-width: 20px 30px 20px 0;
                 border-color: transparent var(--color2) transparent transparent;
-                left: 210px;
+                left: 100px;
             }
             #arrow-right {
                 border-width: 20px 0 20px 30px;
                 border-color: transparent transparent transparent var(--color2);
-                left: 955px;
+                left: 1150px;
+            }
+            .gallery_text{
+                padding: 0;
+                margin: 0;
+                position: absolute;
+                width: 638px;
+                height: 85px;
+                left: 1243px;
+                top: 89px;
+                font-size: 60px;
+                color: var(--color1);
+            }
+            .gallery_text::before{
+                content: "";
+                position: absolute;
+                width: 515px;
+                height: 8px;
+                background-color: var(--color1);
+                top: 100%;
             }
 
             
-#div5{
+#div6{
     position: relative;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: var(--color2) url("../img/backgroundDIV5.png");
+    background: var(--color2);
+    border-top: 5px dashed var(--color1);
 }
     #calidad_icon{
         position: relative;
@@ -298,15 +359,16 @@ body{
         transform: translateY(-10px);
     }
 
-    .gallery_text{
-        padding: 0;
-        margin: 0;
+
+
+    #background_div6{
         position: absolute;
-        top: 80px;
-        left: 550px;
-        font-size: 24px;
-        color: var(--color1);
-        font-weight: bolder;
+        width: 1918px;
+        height: 912px;
+        left: 0px;
+        top: 0px;
+
+        background: linear-gradient(180deg, #F2CC2E 0%, #FFCE00 100%);
     }
 
 /* FOOTER*/

@@ -10,6 +10,8 @@ function addDiv(IDpadre, id) {
   parent.appendChild(element);
   return element;
 }
+
+//Funcion que hace sticky a la barra de navegacion
 var sticky = 1;
 window.onscroll = function () {
   f();
